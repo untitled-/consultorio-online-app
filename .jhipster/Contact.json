@@ -1,0 +1,29 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "patients",
+      "otherEntityName": "patient",
+      "relationshipType": "one-to-one",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "contacts"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "contactType",
+      "fieldType": "ContactType",
+      "fieldValues": "PHONE,EMAIL"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "value",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160312060715",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

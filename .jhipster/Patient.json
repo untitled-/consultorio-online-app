@@ -1,0 +1,59 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "addresss",
+      "otherEntityName": "address",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "patients"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "contacts",
+      "otherEntityName": "contact",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "patients"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "middleName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "dateOfBirth",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "job",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "bloodType",
+      "fieldType": "BloodType",
+      "fieldValues": "A_POSITIVE,A_NEGATIVE,B_POSITIVE,B_NEGATIVE,AB_POSITIVE,AB_NEGATIVE,O_POSITIVE,O_NEGATIVE"
+    }
+  ],
+  "changelogDate": "20160312060713",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

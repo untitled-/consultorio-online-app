@@ -1,0 +1,43 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "patients",
+      "otherEntityName": "patient",
+      "relationshipType": "one-to-one",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "addresss"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "street",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "city",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "zip",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "country",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "apt",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160312060714",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}
