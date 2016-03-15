@@ -24,6 +24,13 @@ build:
   steps:
     # A step that executes `npm install` command
     - npm-install
+    - script:
+            name: install grunt-cli
+            code: |-
+              # Remove java from base box
+              npm install -g grunt-cli
+              npm install -g bower
+              
     # A step that executes `npm test` command
     - npm-test
 
