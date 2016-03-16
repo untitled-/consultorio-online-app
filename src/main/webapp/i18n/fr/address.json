@@ -17,10 +17,10 @@
                 "title": "Address"
             },
             "street": "Street",
+            "apt": "Apt",
             "city": "City",
             "zip": "Zip",
             "country": "Country",
-            "apt": "Apt",
             "patients": "Patients"
         }
     }

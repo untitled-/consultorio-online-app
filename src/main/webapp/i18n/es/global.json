@@ -1,12 +1,20 @@
 {
     "global": {
-        "title": "consultorio_online_ui",
+        "title": "Consultorio en linea",
         "browsehappy": "Está usando un navegador <strong>no actualizado</strong>. Por favor, <a href=\"http://browsehappy.com/?locale=en\">actualice su navegador</a> para mejorar su experiencia.",
         "menu": {
             "home": "Inicio",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entidades",
+				"address": "Direccion",
+                "contact": "Contacto",
+                "patient": "Paciente",
+                "address": "Address",
+                "contact": "Contact",
+                "disease": "Disease",
+                "heredoFamilyBkg": "HeredoFamilyBkg",
+                "patient": "Patient",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

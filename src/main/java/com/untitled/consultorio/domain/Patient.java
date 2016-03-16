@@ -1,5 +1,6 @@
 package com.untitled.consultorio.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import java.time.LocalDate;
@@ -12,6 +13,10 @@ import java.util.Set;
 import java.util.Objects;
 
 import com.untitled.consultorio.domain.enumeration.BloodType;
+
+import com.untitled.consultorio.domain.enumeration.MaritalStatus;
+
+import com.untitled.consultorio.domain.enumeration.Gender;
 
 /**
  * A Patient.
@@ -45,11 +50,24 @@ public class Patient implements Serializable {
     @Column(name = "blood_type")
     private BloodType bloodType;
     
+    @Enumerated(EnumType.STRING)
+    @Column(name = "marital_status")
+    private MaritalStatus maritalStatus;
+    
+    @Enumerated(EnumType.STRING)
+    @Column(name = "gender")
+    private Gender gender;
+    
     @OneToOne
     private Address addresss;
 
+    @OneToMany(mappedBy = "patients")
+    @JsonIgnore
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<Contact> contactss = new HashSet<>();
+
     @OneToOne
-    private Contact contacts;
+    private HeredoFamilyBkg heredoFamilyBkgs;
 
     public Long getId() {
         return id;
@@ -107,6 +125,22 @@ public class Patient implements Serializable {
         this.bloodType = bloodType;
     }
 
+    public MaritalStatus getMaritalStatus() {
+        return maritalStatus;
+    }
+    
+    public void setMaritalStatus(MaritalStatus maritalStatus) {
+        this.maritalStatus = maritalStatus;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+    
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
     public Address getAddresss() {
         return addresss;
     }
@@ -115,12 +149,20 @@ public class Patient implements Serializable {
         this.addresss = address;
     }
 
-    public Contact getContacts() {
-        return contacts;
+    public Set<Contact> getContactss() {
+        return contactss;
     }
 
-    public void setContacts(Contact contact) {
-        this.contacts = contact;
+    public void setContactss(Set<Contact> contacts) {
+        this.contactss = contacts;
+    }
+
+    public HeredoFamilyBkg getHeredoFamilyBkgs() {
+        return heredoFamilyBkgs;
+    }
+
+    public void setHeredoFamilyBkgs(HeredoFamilyBkg heredoFamilyBkg) {
+        this.heredoFamilyBkgs = heredoFamilyBkg;
     }
 
     @Override
@@ -153,6 +195,8 @@ public class Patient implements Serializable {
             ", dateOfBirth='" + dateOfBirth + "'" +
             ", job='" + job + "'" +
             ", bloodType='" + bloodType + "'" +
+            ", maritalStatus='" + maritalStatus + "'" +
+            ", gender='" + gender + "'" +
             '}';
     }
 }

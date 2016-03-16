@@ -25,8 +25,15 @@
             
             <column name="value" type="varchar(255)"/>
             
+            <column name="patients_id" type="bigint"/>
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
         </createTable>
         
+        <addForeignKeyConstraint baseColumnNames="patients_id"
+                                 baseTableName="contact"
+                                 constraintName="fk_contact_patients_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="patient"/>
+
     </changeSet>
 </databaseChangeLog>

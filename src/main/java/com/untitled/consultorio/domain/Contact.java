@@ -1,6 +1,5 @@
 package com.untitled.consultorio.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -33,8 +32,8 @@ public class Contact implements Serializable {
     @Column(name = "value")
     private String value;
     
-    @OneToOne(mappedBy = "contacts")
-    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "patients_id")
     private Patient patients;
 
     public Long getId() {

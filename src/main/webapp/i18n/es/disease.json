@@ -1,0 +1,28 @@
+{
+    "consultorioOnlineUiApp": {
+        "disease" : {
+            "home": {
+                "title": "Diseases",
+                "createLabel": "Crear nuevo Disease",
+                "createOrEditLabel": "Crear o editar Disease",
+                "search": "Search for Disease"
+            },
+            "created": "Un nuevo Disease ha sido creado con el identificador {{ param }}",
+            "updated": "Un Disease ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Disease ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Disease {{ id }}?"
+            },
+            "detail": {
+                "title": "Disease"
+            },
+            "code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "type": "Type",
+            "isCongenital": "IsCongenital",
+            "isInfectious": "IsInfectious",
+            "heredoFamilyBkgs": "HeredoFamilyBkgs"
+        }
+    }
+}

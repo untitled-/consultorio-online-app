@@ -13,6 +13,13 @@
       "relationshipId": 2,
       "relationshipName": "contacts",
       "otherEntityName": "contact",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "patients"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "heredoFamilyBkgs",
+      "otherEntityName": "heredoFamilyBkg",
       "relationshipType": "one-to-one",
       "otherEntityField": "id",
       "ownerSide": true,
@@ -50,6 +57,18 @@
       "fieldName": "bloodType",
       "fieldType": "BloodType",
       "fieldValues": "A_POSITIVE,A_NEGATIVE,B_POSITIVE,B_NEGATIVE,AB_POSITIVE,AB_NEGATIVE,O_POSITIVE,O_NEGATIVE"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "maritalStatus",
+      "fieldType": "MaritalStatus",
+      "fieldValues": "COMMON_LAW,DIVORCED,MARRIED,OTHER,SEPARATED,SINGLE,WIDOWED"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "gender",
+      "fieldType": "Gender",
+      "fieldValues": "MALE,FEMALE"
     }
   ],
   "changelogDate": "20160312060713",

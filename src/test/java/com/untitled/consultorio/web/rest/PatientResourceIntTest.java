@@ -33,6 +33,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import com.untitled.consultorio.domain.enumeration.BloodType;
+import com.untitled.consultorio.domain.enumeration.MaritalStatus;
+import com.untitled.consultorio.domain.enumeration.Gender;
 
 /**
  * Test class for the PatientResource REST controller.
@@ -59,6 +61,12 @@ public class PatientResourceIntTest {
     
     private static final BloodType DEFAULT_BLOOD_TYPE = BloodType.A_POSITIVE;
     private static final BloodType UPDATED_BLOOD_TYPE = BloodType.A_NEGATIVE;
+    
+    private static final MaritalStatus DEFAULT_MARITAL_STATUS = MaritalStatus.COMMON_LAW;
+    private static final MaritalStatus UPDATED_MARITAL_STATUS = MaritalStatus.DIVORCED;
+    
+    private static final Gender DEFAULT_GENDER = Gender.MALE;
+    private static final Gender UPDATED_GENDER = Gender.FEMALE;
 
     @Inject
     private PatientRepository patientRepository;
@@ -96,6 +104,8 @@ public class PatientResourceIntTest {
         patient.setDateOfBirth(DEFAULT_DATE_OF_BIRTH);
         patient.setJob(DEFAULT_JOB);
         patient.setBloodType(DEFAULT_BLOOD_TYPE);
+        patient.setMaritalStatus(DEFAULT_MARITAL_STATUS);
+        patient.setGender(DEFAULT_GENDER);
     }
 
     @Test
@@ -120,6 +130,8 @@ public class PatientResourceIntTest {
         assertThat(testPatient.getDateOfBirth()).isEqualTo(DEFAULT_DATE_OF_BIRTH);
         assertThat(testPatient.getJob()).isEqualTo(DEFAULT_JOB);
         assertThat(testPatient.getBloodType()).isEqualTo(DEFAULT_BLOOD_TYPE);
+        assertThat(testPatient.getMaritalStatus()).isEqualTo(DEFAULT_MARITAL_STATUS);
+        assertThat(testPatient.getGender()).isEqualTo(DEFAULT_GENDER);
     }
 
     @Test
@@ -138,7 +150,9 @@ public class PatientResourceIntTest {
                 .andExpect(jsonPath("$.[*].lastName").value(hasItem(DEFAULT_LAST_NAME.toString())))
                 .andExpect(jsonPath("$.[*].dateOfBirth").value(hasItem(DEFAULT_DATE_OF_BIRTH.toString())))
                 .andExpect(jsonPath("$.[*].job").value(hasItem(DEFAULT_JOB.toString())))
-                .andExpect(jsonPath("$.[*].bloodType").value(hasItem(DEFAULT_BLOOD_TYPE.toString())));
+                .andExpect(jsonPath("$.[*].bloodType").value(hasItem(DEFAULT_BLOOD_TYPE.toString())))
+                .andExpect(jsonPath("$.[*].maritalStatus").value(hasItem(DEFAULT_MARITAL_STATUS.toString())))
+                .andExpect(jsonPath("$.[*].gender").value(hasItem(DEFAULT_GENDER.toString())));
     }
 
     @Test
@@ -157,7 +171,9 @@ public class PatientResourceIntTest {
             .andExpect(jsonPath("$.lastName").value(DEFAULT_LAST_NAME.toString()))
             .andExpect(jsonPath("$.dateOfBirth").value(DEFAULT_DATE_OF_BIRTH.toString()))
             .andExpect(jsonPath("$.job").value(DEFAULT_JOB.toString()))
-            .andExpect(jsonPath("$.bloodType").value(DEFAULT_BLOOD_TYPE.toString()));
+            .andExpect(jsonPath("$.bloodType").value(DEFAULT_BLOOD_TYPE.toString()))
+            .andExpect(jsonPath("$.maritalStatus").value(DEFAULT_MARITAL_STATUS.toString()))
+            .andExpect(jsonPath("$.gender").value(DEFAULT_GENDER.toString()));
     }
 
     @Test
@@ -183,6 +199,8 @@ public class PatientResourceIntTest {
         patient.setDateOfBirth(UPDATED_DATE_OF_BIRTH);
         patient.setJob(UPDATED_JOB);
         patient.setBloodType(UPDATED_BLOOD_TYPE);
+        patient.setMaritalStatus(UPDATED_MARITAL_STATUS);
+        patient.setGender(UPDATED_GENDER);
 
         restPatientMockMvc.perform(put("/api/patients")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -199,6 +217,8 @@ public class PatientResourceIntTest {
         assertThat(testPatient.getDateOfBirth()).isEqualTo(UPDATED_DATE_OF_BIRTH);
         assertThat(testPatient.getJob()).isEqualTo(UPDATED_JOB);
         assertThat(testPatient.getBloodType()).isEqualTo(UPDATED_BLOOD_TYPE);
+        assertThat(testPatient.getMaritalStatus()).isEqualTo(UPDATED_MARITAL_STATUS);
+        assertThat(testPatient.getGender()).isEqualTo(UPDATED_GENDER);
     }
 
     @Test

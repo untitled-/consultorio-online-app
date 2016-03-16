@@ -35,6 +35,8 @@ angular.module('consultorioOnlineUiApp')
                 dateOfBirth: null,
                 job: null,
                 bloodType: null,
+                maritalStatus: null,
+                gender: null,
                 id: null
             };
         };

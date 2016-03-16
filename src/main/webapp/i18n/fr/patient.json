@@ -22,8 +22,11 @@
             "dateOfBirth": "DateOfBirth",
             "job": "Job",
             "bloodType": "BloodType",
+            "maritalStatus": "MaritalStatus",
+            "gender": "Gender",
             "addresss": "Addresss",
-            "contacts": "Contacts"
+            "contacts": "Contacts",
+            "heredoFamilyBkgs": "HeredoFamilyBkgs"
         }
     }
 }

@@ -27,6 +27,9 @@ public class Address implements Serializable {
     @Column(name = "street")
     private String street;
     
+    @Column(name = "apt")
+    private String apt;
+    
     @Column(name = "city")
     private String city;
     
@@ -35,9 +38,6 @@ public class Address implements Serializable {
     
     @Column(name = "country")
     private String country;
-    
-    @Column(name = "apt")
-    private String apt;
     
     @OneToOne(mappedBy = "addresss")
     @JsonIgnore
@@ -57,6 +57,14 @@ public class Address implements Serializable {
     
     public void setStreet(String street) {
         this.street = street;
+    }
+
+    public String getApt() {
+        return apt;
+    }
+    
+    public void setApt(String apt) {
+        this.apt = apt;
     }
 
     public String getCity() {
@@ -81,14 +89,6 @@ public class Address implements Serializable {
     
     public void setCountry(String country) {
         this.country = country;
-    }
-
-    public String getApt() {
-        return apt;
-    }
-    
-    public void setApt(String apt) {
-        this.apt = apt;
     }
 
     public Patient getPatients() {
@@ -124,10 +124,10 @@ public class Address implements Serializable {
         return "Address{" +
             "id=" + id +
             ", street='" + street + "'" +
+            ", apt='" + apt + "'" +
             ", city='" + city + "'" +
             ", zip='" + zip + "'" +
             ", country='" + country + "'" +
-            ", apt='" + apt + "'" +
             '}';
     }
 }

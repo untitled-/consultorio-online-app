@@ -1,0 +1,48 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "heredoFamilyBkgs",
+      "otherEntityName": "heredoFamilyBkg",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "diseases"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "type",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "isCongenital",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "isInfectious",
+      "fieldType": "Boolean"
+    }
+  ],
+  "changelogDate": "20160316050858",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

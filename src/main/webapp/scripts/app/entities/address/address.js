@@ -62,10 +62,10 @@ angular.module('consultorioOnlineUiApp')
                             entity: function () {
                                 return {
                                     street: null,
+                                    apt: null,
                                     city: null,
                                     zip: null,
                                     country: null,
-                                    apt: null,
                                     id: null
                                 };
                             }

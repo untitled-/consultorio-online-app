@@ -83,14 +83,7 @@ public class ContactResource {
         method = RequestMethod.GET,
         produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
-    public List<Contact> getAllContacts(@RequestParam(required = false) String filter) {
-        if ("patients-is-null".equals(filter)) {
-            log.debug("REST request to get all Contacts where patients is null");
-            return StreamSupport
-                .stream(contactRepository.findAll().spliterator(), false)
-                .filter(contact -> contact.getPatients() == null)
-                .collect(Collectors.toList());
-        }
+    public List<Contact> getAllContacts() {
         log.debug("REST request to get all Contacts");
         return contactRepository.findAll();
             }

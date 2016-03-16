@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="now" value="sysdate" dbms="oracle"/>
+
+    <property name="autoIncrement" value="true" dbms="mysql,h2,postgresql,oracle"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle"/>
+
+    <!--
+        Added the entity HeredoFamilyBkg.
+    -->
+    <changeSet id="20160316050857" author="jhipster">
+        <createTable tableName="heredo_family_bkg">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="observation" type="varchar(255)"/>
+            
+            <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
+        </createTable>
+        
+        <createTable tableName="heredo_family_bkg_diseases">
+            <column name="diseasess_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="heredo_family_bkgs_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="heredo_family_bkgs_id, diseasess_id" tableName="heredo_family_bkg_diseases"/>
+
+        <addForeignKeyConstraint baseColumnNames="heredo_family_bkgs_id"
+                                 baseTableName="heredo_family_bkg_diseases"
+                                 constraintName="fk_heredo_family_bkg_diseases_disease_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="heredo_family_bkg"/>
+
+        <addForeignKeyConstraint baseColumnNames="diseasess_id"
+                                 baseTableName="heredo_family_bkg_diseases"
+                                 constraintName="fk_heredo_family_bkg_diseases_heredofamilybkg_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="disease"/>
+        
+    </changeSet>
+</databaseChangeLog>

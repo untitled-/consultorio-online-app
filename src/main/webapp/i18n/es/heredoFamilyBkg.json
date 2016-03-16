@@ -1,0 +1,24 @@
+{
+    "consultorioOnlineUiApp": {
+        "heredoFamilyBkg" : {
+            "home": {
+                "title": "HeredoFamilyBkgs",
+                "createLabel": "Crear nuevo HeredoFamilyBkg",
+                "createOrEditLabel": "Crear o editar HeredoFamilyBkg",
+                "search": "Search for HeredoFamilyBkg"
+            },
+            "created": "Un nuevo HeredoFamilyBkg ha sido creado con el identificador {{ param }}",
+            "updated": "Un HeredoFamilyBkg ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un HeredoFamilyBkg ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar HeredoFamilyBkg {{ id }}?"
+            },
+            "detail": {
+                "title": "HeredoFamilyBkg"
+            },
+            "observation": "Observation",
+            "diseases": "Diseases",
+            "patients": "Patients"
+        }
+    }
+}

@@ -33,10 +33,14 @@
             
             <column name="blood_type" type="varchar(255)"/>
             
+            <column name="marital_status" type="varchar(255)"/>
+            
+            <column name="gender" type="varchar(255)"/>
+            
             <column name="addresss_id" type="bigint">
                 <constraints unique="true"/>
             </column>
-            <column name="contacts_id" type="bigint">
+            <column name="heredo_family_bkgs_id" type="bigint">
                 <constraints unique="true"/>
             </column>
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
@@ -48,11 +52,11 @@
                                  referencedColumnNames="id"
                                  referencedTableName="address"/>
 
-        <addForeignKeyConstraint baseColumnNames="contacts_id"
+        <addForeignKeyConstraint baseColumnNames="heredo_family_bkgs_id"
                                  baseTableName="patient"
-                                 constraintName="fk_patient_contacts_id"
+                                 constraintName="fk_patient_heredofamilybkgs_id"
                                  referencedColumnNames="id"
-                                 referencedTableName="contact"/>
+                                 referencedTableName="heredo_family_bkg"/>
 
     </changeSet>
 </databaseChangeLog>

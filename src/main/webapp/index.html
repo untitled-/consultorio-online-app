@@ -11,6 +11,8 @@
         <!-- build:css assets/styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+        <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css" />
+        <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css assets/styles/main.css -->
@@ -66,6 +68,8 @@
         <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
         <script src="bower_components/sockjs-client/dist/sockjs.js"></script>
         <script src="bower_components/stomp-websocket/lib/stomp.min.js"></script>
+        <script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
+        <script src="bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -180,6 +184,23 @@
     <script src="scripts/components/entities/patient/patient.service.js"></script>
     <script src="scripts/components/entities/patient/patient.search.service.js"></script>
     <script src="bower_components/messageformat/locale/es.js"></script>
+    <script src="scripts/app/entities/disease/disease.js"></script>
+    <script src="scripts/app/entities/disease/disease.controller.js"></script>
+    <script src="scripts/app/entities/disease/disease-dialog.controller.js"></script>
+    <script src="scripts/app/entities/disease/disease-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/disease/disease-detail.controller.js"></script>
+    <script src="scripts/components/entities/disease/disease.service.js"></script>
+    <script src="scripts/components/entities/disease/disease.search.service.js"></script>
+    <script src="scripts/app/entities/heredoFamilyBkg/heredoFamilyBkg.js"></script>
+    <script src="scripts/app/entities/heredoFamilyBkg/heredoFamilyBkg.controller.js"></script>
+    <script src="scripts/app/entities/heredoFamilyBkg/heredoFamilyBkg-dialog.controller.js"></script>
+    <script src="scripts/app/entities/heredoFamilyBkg/heredoFamilyBkg-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/heredoFamilyBkg/heredoFamilyBkg-detail.controller.js"></script>
+    <script src="scripts/components/entities/heredoFamilyBkg/heredoFamilyBkg.service.js"></script>
+    <script src="scripts/components/entities/heredoFamilyBkg/heredoFamilyBkg.search.service.js"></script>
     <!-- endbuild -->
+	<script>
+	  //$.material.init()
+	</script>
 </body>
 </html>

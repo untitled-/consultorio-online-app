@@ -17,22 +17,22 @@
     },
     {
       "fieldId": 2,
-      "fieldName": "city",
+      "fieldName": "apt",
       "fieldType": "String"
     },
     {
       "fieldId": 3,
-      "fieldName": "zip",
+      "fieldName": "city",
       "fieldType": "String"
     },
     {
       "fieldId": 4,
-      "fieldName": "country",
+      "fieldName": "zip",
       "fieldType": "String"
     },
     {
       "fieldId": 5,
-      "fieldName": "apt",
+      "fieldName": "country",
       "fieldType": "String"
     }
   ],

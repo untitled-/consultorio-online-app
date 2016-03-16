@@ -1,6 +1,6 @@
 {
     "global": {
-        "title": "consultorio_online_ui",
+        "title": "Consultorio Online",
         "browsehappy": "Vous utilisez un <strong>ancien</strong> navigateur. Veuillez <a href=\"http://browsehappy.com/?locale=fr\">mettre à jour votre navigateur</a> pour une meilleure expérience.",
         "menu": {
             "home": "Accueil",
@@ -10,6 +10,8 @@
                 "address": "Address",
                 "contact": "Contact",
                 "patient": "Patient",
+                "disease": "Disease",
+                "heredoFamilyBkg": "HeredoFamilyBkg",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

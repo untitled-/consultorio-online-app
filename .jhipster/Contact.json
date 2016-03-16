@@ -4,9 +4,8 @@
       "relationshipId": 1,
       "relationshipName": "patients",
       "otherEntityName": "patient",
-      "relationshipType": "one-to-one",
-      "ownerSide": false,
-      "otherEntityRelationshipName": "contacts"
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
     }
   ],
   "fields": [

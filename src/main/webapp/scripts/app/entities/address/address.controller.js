@@ -30,10 +30,10 @@ angular.module('consultorioOnlineUiApp')
         $scope.clear = function () {
             $scope.address = {
                 street: null,
+                apt: null,
                 city: null,
                 zip: null,
                 country: null,
-                apt: null,
                 id: null
             };
         };

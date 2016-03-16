@@ -67,7 +67,7 @@ class PatientGatlingTest extends Simulation {
             .exec(http("Create new patient")
             .post("/api/patients")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "firstName":"SAMPLE_TEXT", "middleName":"SAMPLE_TEXT", "lastName":"SAMPLE_TEXT", "dateOfBirth":"2020-01-01T00:00:00.000Z", "job":"SAMPLE_TEXT", "bloodType":null}""")).asJSON
+            .body(StringBody("""{"id":null, "firstName":"SAMPLE_TEXT", "middleName":"SAMPLE_TEXT", "lastName":"SAMPLE_TEXT", "dateOfBirth":"2020-01-01T00:00:00.000Z", "job":"SAMPLE_TEXT", "bloodType":null, "maritalStatus":null, "gender":null}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_patient_url")))
             .pause(10)

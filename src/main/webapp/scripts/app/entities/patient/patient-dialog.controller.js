@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('consultorioOnlineUiApp').controller('PatientDialogController',
-    ['$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Patient', 'Address', 'Contact',
-        function($scope, $stateParams, $uibModalInstance, $q, entity, Patient, Address, Contact) {
+    ['$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Patient', 'Address', 'Contact', 'HeredoFamilyBkg',
+        function($scope, $stateParams, $uibModalInstance, $q, entity, Patient, Address, Contact, HeredoFamilyBkg) {
 
         $scope.patient = entity;
 		$scope.patients = Patient.query({filter: 'patients-is-null'});
@@ -15,14 +15,15 @@ angular.module('consultorioOnlineUiApp').controller('PatientDialogController',
         }).then(function(addresss) {
             $scope.addressss.push(addresss);
         });
-        $scope.contactss = Contact.query({filter: 'patients-is-null'});
-        $q.all([$scope.patients.$promise, $scope.contactss.$promise]).then(function() {
-            if (!$scope.patients.contacts || !$scope.patients.contacts.id) {
+        $scope.contacts = Contact.query();
+        $scope.heredofamilybkgss = HeredoFamilyBkg.query({filter: 'patients-is-null'});
+        $q.all([$scope.patients.$promise, $scope.heredofamilybkgss.$promise]).then(function() {
+            if (!$scope.patients.heredoFamilyBkgs || !$scope.patients.heredoFamilyBkgs.id) {
                 return $q.reject();
             }
-            return Contact.get({id : $scope.patients.contacts.id}).$promise;
-        }).then(function(contacts) {
-            $scope.contactss.push(contacts);
+            return HeredoFamilyBkg.get({id : $scope.patients.heredoFamilyBkgs.id}).$promise;
+        }).then(function(heredoFamilyBkgs) {
+            $scope.heredofamilybkgss.push(heredoFamilyBkgs);
         });
         $scope.load = function(id) {
             Patient.get({id : id}, function(result) {

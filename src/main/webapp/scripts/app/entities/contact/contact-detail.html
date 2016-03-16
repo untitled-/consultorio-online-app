@@ -26,6 +26,14 @@
                     <span class="form-control-static">{{contact.value}}</span>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.contact.patients">patients</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="patient.detail({id:contact.patients.id})">{{contact.patients.id}}</a>
+                </td>
+            </tr>
             </tbody>
         </table>
     </div>

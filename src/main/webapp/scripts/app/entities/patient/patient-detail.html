@@ -60,6 +60,22 @@
             </tr>
             <tr>
                 <td>
+                    <span translate="consultorioOnlineUiApp.patient.maritalStatus">MaritalStatus</span>
+                </td>
+                <td>
+                    <span class="form-control-static" translate="{{'consultorioOnlineUiApp.MaritalStatus.' + patient.maritalStatus}}">{{patient.maritalStatus}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.patient.gender">Gender</span>
+                </td>
+                <td>
+                    <span class="form-control-static" translate="{{'consultorioOnlineUiApp.Gender.' + patient.gender}}">{{patient.gender}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <span translate="consultorioOnlineUiApp.patient.addresss">addresss</span>
                 </td>
                 <td>
@@ -68,10 +84,10 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.patient.contacts">contacts</span>
+                    <span translate="consultorioOnlineUiApp.patient.heredoFamilyBkgs">heredoFamilyBkgs</span>
                 </td>
                 <td>
-                    <a class="form-control-static" ui-sref="contact.detail({id:patient.contacts.id})">{{patient.contacts.id}}</a>
+                    <a class="form-control-static" ui-sref="heredoFamilyBkg.detail({id:patient.heredoFamilyBkgs.id})">{{patient.heredoFamilyBkgs.id}}</a>
                 </td>
             </tr>
             </tbody>

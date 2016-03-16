@@ -27,6 +27,12 @@
                      />
         </div>
 
+        <div class="form-group">
+            <label translate="consultorioOnlineUiApp.contact.patients" for="field_patients">patients</label>
+            <select class="form-control" id="field_patients" name="patients" ng-model="contact.patients" ng-options="patient as patient.id for patient in patients track by patient.id">
+                <option value=""></option>
+            </select>
+        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">

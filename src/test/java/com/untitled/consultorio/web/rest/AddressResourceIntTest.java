@@ -44,14 +44,14 @@ public class AddressResourceIntTest {
 
     private static final String DEFAULT_STREET = "AAAAA";
     private static final String UPDATED_STREET = "BBBBB";
+    private static final String DEFAULT_APT = "AAAAA";
+    private static final String UPDATED_APT = "BBBBB";
     private static final String DEFAULT_CITY = "AAAAA";
     private static final String UPDATED_CITY = "BBBBB";
     private static final String DEFAULT_ZIP = "AAAAA";
     private static final String UPDATED_ZIP = "BBBBB";
     private static final String DEFAULT_COUNTRY = "AAAAA";
     private static final String UPDATED_COUNTRY = "BBBBB";
-    private static final String DEFAULT_APT = "AAAAA";
-    private static final String UPDATED_APT = "BBBBB";
 
     @Inject
     private AddressRepository addressRepository;
@@ -84,10 +84,10 @@ public class AddressResourceIntTest {
     public void initTest() {
         address = new Address();
         address.setStreet(DEFAULT_STREET);
+        address.setApt(DEFAULT_APT);
         address.setCity(DEFAULT_CITY);
         address.setZip(DEFAULT_ZIP);
         address.setCountry(DEFAULT_COUNTRY);
-        address.setApt(DEFAULT_APT);
     }
 
     @Test
@@ -107,10 +107,10 @@ public class AddressResourceIntTest {
         assertThat(addresss).hasSize(databaseSizeBeforeCreate + 1);
         Address testAddress = addresss.get(addresss.size() - 1);
         assertThat(testAddress.getStreet()).isEqualTo(DEFAULT_STREET);
+        assertThat(testAddress.getApt()).isEqualTo(DEFAULT_APT);
         assertThat(testAddress.getCity()).isEqualTo(DEFAULT_CITY);
         assertThat(testAddress.getZip()).isEqualTo(DEFAULT_ZIP);
         assertThat(testAddress.getCountry()).isEqualTo(DEFAULT_COUNTRY);
-        assertThat(testAddress.getApt()).isEqualTo(DEFAULT_APT);
     }
 
     @Test
@@ -125,10 +125,10 @@ public class AddressResourceIntTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(address.getId().intValue())))
                 .andExpect(jsonPath("$.[*].street").value(hasItem(DEFAULT_STREET.toString())))
+                .andExpect(jsonPath("$.[*].apt").value(hasItem(DEFAULT_APT.toString())))
                 .andExpect(jsonPath("$.[*].city").value(hasItem(DEFAULT_CITY.toString())))
                 .andExpect(jsonPath("$.[*].zip").value(hasItem(DEFAULT_ZIP.toString())))
-                .andExpect(jsonPath("$.[*].country").value(hasItem(DEFAULT_COUNTRY.toString())))
-                .andExpect(jsonPath("$.[*].apt").value(hasItem(DEFAULT_APT.toString())));
+                .andExpect(jsonPath("$.[*].country").value(hasItem(DEFAULT_COUNTRY.toString())));
     }
 
     @Test
@@ -143,10 +143,10 @@ public class AddressResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(address.getId().intValue()))
             .andExpect(jsonPath("$.street").value(DEFAULT_STREET.toString()))
+            .andExpect(jsonPath("$.apt").value(DEFAULT_APT.toString()))
             .andExpect(jsonPath("$.city").value(DEFAULT_CITY.toString()))
             .andExpect(jsonPath("$.zip").value(DEFAULT_ZIP.toString()))
-            .andExpect(jsonPath("$.country").value(DEFAULT_COUNTRY.toString()))
-            .andExpect(jsonPath("$.apt").value(DEFAULT_APT.toString()));
+            .andExpect(jsonPath("$.country").value(DEFAULT_COUNTRY.toString()));
     }
 
     @Test
@@ -167,10 +167,10 @@ public class AddressResourceIntTest {
 
         // Update the address
         address.setStreet(UPDATED_STREET);
+        address.setApt(UPDATED_APT);
         address.setCity(UPDATED_CITY);
         address.setZip(UPDATED_ZIP);
         address.setCountry(UPDATED_COUNTRY);
-        address.setApt(UPDATED_APT);
 
         restAddressMockMvc.perform(put("/api/addresss")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -182,10 +182,10 @@ public class AddressResourceIntTest {
         assertThat(addresss).hasSize(databaseSizeBeforeUpdate);
         Address testAddress = addresss.get(addresss.size() - 1);
         assertThat(testAddress.getStreet()).isEqualTo(UPDATED_STREET);
+        assertThat(testAddress.getApt()).isEqualTo(UPDATED_APT);
         assertThat(testAddress.getCity()).isEqualTo(UPDATED_CITY);
         assertThat(testAddress.getZip()).isEqualTo(UPDATED_ZIP);
         assertThat(testAddress.getCountry()).isEqualTo(UPDATED_COUNTRY);
-        assertThat(testAddress.getApt()).isEqualTo(UPDATED_APT);
     }
 
     @Test

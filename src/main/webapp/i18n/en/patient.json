@@ -16,14 +16,17 @@
             "detail": {
                 "title": "Patient"
             },
-            "firstName": "First Name",
-            "middleName": "Middle Name",
-            "lastName": "Last Name",
-            "dateOfBirth": "Date Of Birth",
+            "firstName": "FirstName",
+            "middleName": "MiddleName",
+            "lastName": "LastName",
+            "dateOfBirth": "DateOfBirth",
             "job": "Job",
-            "bloodType": "Blood Type",
+            "bloodType": "BloodType",
+            "maritalStatus": "MaritalStatus",
+            "gender": "Gender",
             "addresss": "Addresss",
-            "contacts": "Contacts"
+            "contacts": "Contacts",
+            "heredoFamilyBkgs": "HeredoFamilyBkgs"
         }
     }
 }

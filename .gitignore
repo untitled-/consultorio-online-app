@@ -10,6 +10,7 @@
 /node/**
 /node_modules/**
 
+**/bower_components/**
 ######################
 # SASS
 ######################
@@ -127,3 +128,4 @@ Desktop.ini
 # Maven Wrapper
 ######################
 !.mvn/wrapper/maven-wrapper.jar
+/.apt_generated/

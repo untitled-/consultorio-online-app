@@ -20,6 +20,8 @@ angular.module('consultorioOnlineUiApp')
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('patient');
                         $translatePartialLoader.addPart('bloodType');
+                        $translatePartialLoader.addPart('maritalStatus');
+                        $translatePartialLoader.addPart('gender');
                         $translatePartialLoader.addPart('global');
                         return $translate.refresh();
                     }]
@@ -42,6 +44,8 @@ angular.module('consultorioOnlineUiApp')
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('patient');
                         $translatePartialLoader.addPart('bloodType');
+                        $translatePartialLoader.addPart('maritalStatus');
+                        $translatePartialLoader.addPart('gender');
                         return $translate.refresh();
                     }],
                     entity: ['$stateParams', 'Patient', function($stateParams, Patient) {
@@ -69,6 +73,8 @@ angular.module('consultorioOnlineUiApp')
                                     dateOfBirth: null,
                                     job: null,
                                     bloodType: null,
+                                    maritalStatus: null,
+                                    gender: null,
                                     id: null
                                 };
                             }

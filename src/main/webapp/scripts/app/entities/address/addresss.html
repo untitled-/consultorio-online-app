@@ -32,10 +32,10 @@ class="hidden-xs"                        translate="consultorioOnlineUiApp.addre
                 <tr>
                     <th><span translate="global.field.id">ID</span></th>
                     <th><span translate="consultorioOnlineUiApp.address.street">Street</span></th>
+                    <th><span translate="consultorioOnlineUiApp.address.apt">Apt</span></th>
                     <th><span translate="consultorioOnlineUiApp.address.city">City</span></th>
                     <th><span translate="consultorioOnlineUiApp.address.zip">Zip</span></th>
                     <th><span translate="consultorioOnlineUiApp.address.country">Country</span></th>
-                    <th><span translate="consultorioOnlineUiApp.address.apt">Apt</span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -43,10 +43,10 @@ class="hidden-xs"                        translate="consultorioOnlineUiApp.addre
                 <tr ng-repeat="address in addresss track by address.id">
                     <td><a ui-sref="address.detail({id:address.id})">{{address.id}}</a></td>
                     <td>{{address.street}}</td>
+                    <td>{{address.apt}}</td>
                     <td>{{address.city}}</td>
                     <td>{{address.zip}}</td>
                     <td>{{address.country}}</td>
-                    <td>{{address.apt}}</td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

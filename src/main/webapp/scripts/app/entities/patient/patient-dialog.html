@@ -60,16 +60,40 @@
                 <option value="O_NEGATIVE" translate="consultorioOnlineUiApp.BloodType.O_NEGATIVE">O_NEGATIVE</option>
             </select>
         </div>
-
         <div class="form-group">
-            <label translate="consultorioOnlineUiApp.patient.addresss" for="field_addresss">addresss</label>
-            <select class="form-control" id="field_addresss" name="addresss" ng-model="patient.addresss" ng-options="address as address.id for address in addressss | orderBy:'id' track by address.id">
-                <option value=""></option>
+            <label class="control-label" translate="consultorioOnlineUiApp.patient.maritalStatus" for="field_maritalStatus">MaritalStatus</label>
+            <select class="form-control" name="maritalStatus" ng-model="patient.maritalStatus" id="field_maritalStatus">
+                <option value="COMMON_LAW" translate="consultorioOnlineUiApp.MaritalStatus.COMMON_LAW">COMMON_LAW</option>
+                <option value="DIVORCED" translate="consultorioOnlineUiApp.MaritalStatus.DIVORCED">DIVORCED</option>
+                <option value="MARRIED" translate="consultorioOnlineUiApp.MaritalStatus.MARRIED">MARRIED</option>
+                <option value="OTHER" translate="consultorioOnlineUiApp.MaritalStatus.OTHER">OTHER</option>
+                <option value="SEPARATED" translate="consultorioOnlineUiApp.MaritalStatus.SEPARATED">SEPARATED</option>
+                <option value="SINGLE" translate="consultorioOnlineUiApp.MaritalStatus.SINGLE">SINGLE</option>
+                <option value="WIDOWED" translate="consultorioOnlineUiApp.MaritalStatus.WIDOWED">WIDOWED</option>
             </select>
         </div>
         <div class="form-group">
-            <label translate="consultorioOnlineUiApp.patient.contacts" for="field_contacts">contacts</label>
-            <select class="form-control" id="field_contacts" name="contacts" ng-model="patient.contacts" ng-options="contact as contact.id for contact in contactss | orderBy:'id' track by contact.id">
+            <label class="control-label" translate="consultorioOnlineUiApp.patient.gender" for="field_gender">Gender</label>
+            <select class="form-control" name="gender" ng-model="patient.gender" id="field_gender">
+                <option value="MALE" translate="consultorioOnlineUiApp.Gender.MALE">MALE</option>
+                <option value="FEMALE" translate="consultorioOnlineUiApp.Gender.FEMALE">FEMALE</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label translate="consultorioOnlineUiApp.patient.addresss" for="field_addresss">addresss</label>
+            <select class="form-control" id="field_addresss" name="addresss" ng-model="patient.addresss" ng-options="address as (address.street + ' '+address.apt) for address in addressss | orderBy:'id' track by address.id">
+                <option value=""></option>
+            </select>
+            <button class="btn btn-primary" ui-sref="address.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs" translate="consultorioOnlineUiApp.address.home.createLabel">Create new Address
+                    </span>
+                </button>
+        </div>
+        <div class="form-group">
+            <label translate="consultorioOnlineUiApp.patient.heredoFamilyBkgs" for="field_heredoFamilyBkgs">heredoFamilyBkgs</label>
+            <select class="form-control" id="field_heredoFamilyBkgs" name="heredoFamilyBkgs" ng-model="patient.heredoFamilyBkgs" ng-options="heredoFamilyBkg as heredoFamilyBkg.id for heredoFamilyBkg in heredofamilybkgss | orderBy:'id' track by heredoFamilyBkg.id">
                 <option value=""></option>
             </select>
         </div>

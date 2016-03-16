@@ -1,0 +1,31 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "diseases",
+      "otherEntityName": "disease",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "patients",
+      "otherEntityName": "patient",
+      "relationshipType": "one-to-one",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "heredoFamilyBkgs"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "observation",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160316050857",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

@@ -1,0 +1,78 @@
+<div>
+    <h2 translate="consultorioOnlineUiApp.disease.home.title">Diseases</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="disease.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                        translate="consultorioOnlineUiApp.disease.home.createLabel">Create new Disease
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'consultorioOnlineUiApp.disease.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="consultorioOnlineUiApp.disease.code">Code</span></th>
+                    <th><span translate="consultorioOnlineUiApp.disease.name">Name</span></th>
+                    <th><span translate="consultorioOnlineUiApp.disease.description">Description</span></th>
+                    <th><span translate="consultorioOnlineUiApp.disease.type">Type</span></th>
+                    <th><span translate="consultorioOnlineUiApp.disease.isCongenital">IsCongenital</span></th>
+                    <th><span translate="consultorioOnlineUiApp.disease.isInfectious">IsInfectious</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="disease in diseases track by disease.id">
+                    <td><a ui-sref="disease.detail({id:disease.id})">{{disease.id}}</a></td>
+                    <td>{{disease.code}}</td>
+                    <td>{{disease.name}}</td>
+                    <td>{{disease.description}}</td>
+                    <td>{{disease.type}}</td>
+                    <td>{{disease.isCongenital}}</td>
+                    <td>{{disease.isInfectious}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="disease.detail({id:disease.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="disease.edit({id:disease.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="disease.delete({id:disease.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
