@@ -1,0 +1,25 @@
+{
+    "consultorioOnlineUiApp": {
+        "treatment" : {
+            "home": {
+                "title": "Treatments",
+                "createLabel": "Créer un nouveau Treatment",
+                "createOrEditLabel": "Créer ou éditer un Treatment",
+                "search": "Search for Treatment"
+            },
+            "created": "Un nouveau Treatment a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Treatment avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Treatment avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Treatment {{ id }} ?"
+            },
+            "detail": {
+                "title": "Treatment"
+            },
+            "prescriptionNumber": "PrescriptionNumber",
+            "drugs": "Drugs",
+            "consultations": "Consultations"
+        }
+    }
+}
+

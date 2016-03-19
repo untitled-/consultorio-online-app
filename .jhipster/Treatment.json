@@ -1,0 +1,31 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "drugs",
+      "otherEntityName": "drug",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "consultations",
+      "otherEntityName": "consultation",
+      "relationshipType": "one-to-one",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "treatments"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "prescriptionNumber",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160319033833",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

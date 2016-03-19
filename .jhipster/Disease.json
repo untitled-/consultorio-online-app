@@ -7,6 +7,14 @@
       "relationshipType": "many-to-many",
       "ownerSide": false,
       "otherEntityRelationshipName": "diseases"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "pathologicBkgs",
+      "otherEntityName": "pathologicBkg",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "diseases"
     }
   ],
   "fields": [

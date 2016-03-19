@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('consultorioOnlineUiApp').controller('DiseaseDialogController',
-    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Disease', 'HeredoFamilyBkg',
-        function($scope, $stateParams, $uibModalInstance, entity, Disease, HeredoFamilyBkg) {
+    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Disease', 'HeredoFamilyBkg', 'PathologicBkg',
+        function($scope, $stateParams, $uibModalInstance, entity, Disease, HeredoFamilyBkg, PathologicBkg) {
 
         $scope.disease = entity;
         $scope.heredofamilybkgs = HeredoFamilyBkg.query();
+        $scope.pathologicbkgs = PathologicBkg.query();
         $scope.load = function(id) {
             Disease.get({id : id}, function(result) {
                 $scope.disease = result;

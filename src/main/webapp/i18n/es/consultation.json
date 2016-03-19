@@ -1,0 +1,28 @@
+{
+    "consultorioOnlineUiApp": {
+        "consultation" : {
+            "home": {
+                "title": "Consultations",
+                "createLabel": "Crear nuevo Consultation",
+                "createOrEditLabel": "Crear o editar Consultation",
+                "search": "Search for Consultation"
+            },
+            "created": "Un nuevo Consultation ha sido creado con el identificador {{ param }}",
+            "updated": "Un Consultation ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Consultation ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Consultation {{ id }}?"
+            },
+            "detail": {
+                "title": "Consultation"
+            },
+            "consultationDate": "ConsultationDate",
+            "idx": "Idx",
+            "diferentialDiagnostic": "DiferentialDiagnostic",
+            "tests": "Tests",
+            "treatments": "Treatments",
+            "symptoms": "Symptoms",
+            "patients": "Patients"
+        }
+    }
+}

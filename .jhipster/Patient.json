@@ -24,6 +24,38 @@
       "otherEntityField": "id",
       "ownerSide": true,
       "otherEntityRelationshipName": "patients"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipName": "nonPathologicBkgs",
+      "otherEntityName": "nonPathologicBkg",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "patients"
+    },
+    {
+      "relationshipId": 5,
+      "relationshipName": "pathologicBkgs",
+      "otherEntityName": "pathologicBkg",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "patients"
+    },
+    {
+      "relationshipId": 6,
+      "relationshipName": "gynecoobstetricBkgs",
+      "otherEntityName": "gynecoobstetricBkg",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "patients"
+    },
+    {
+      "relationshipId": 7,
+      "relationshipName": "consultations",
+      "otherEntityName": "consultation",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "patients"
     }
   ],
   "fields": [

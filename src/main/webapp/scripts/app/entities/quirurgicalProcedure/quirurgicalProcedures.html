@@ -1,0 +1,76 @@
+<div>
+    <h2 translate="consultorioOnlineUiApp.quirurgicalProcedure.home.title">QuirurgicalProcedures</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="quirurgicalProcedure.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                        translate="consultorioOnlineUiApp.quirurgicalProcedure.home.createLabel">Create new QuirurgicalProcedure
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'consultorioOnlineUiApp.quirurgicalProcedure.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="consultorioOnlineUiApp.quirurgicalProcedure.code">Code</span></th>
+                    <th><span translate="consultorioOnlineUiApp.quirurgicalProcedure.name">Name</span></th>
+                    <th><span translate="consultorioOnlineUiApp.quirurgicalProcedure.description">Description</span></th>
+                    <th><span translate="consultorioOnlineUiApp.quirurgicalProcedure.pathologicBkgs">pathologicBkgs</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="quirurgicalProcedure in quirurgicalProcedures track by quirurgicalProcedure.id">
+                    <td><a ui-sref="quirurgicalProcedure.detail({id:quirurgicalProcedure.id})">{{quirurgicalProcedure.id}}</a></td>
+                    <td>{{quirurgicalProcedure.code}}</td>
+                    <td>{{quirurgicalProcedure.name}}</td>
+                    <td>{{quirurgicalProcedure.description}}</td>
+                    <td>
+                        <a ui-sref="pathologicBkg.detail({id:quirurgicalProcedure.pathologicBkgs.id})">{{quirurgicalProcedure.pathologicBkgs.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="quirurgicalProcedure.detail({id:quirurgicalProcedure.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="quirurgicalProcedure.edit({id:quirurgicalProcedure.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="quirurgicalProcedure.delete({id:quirurgicalProcedure.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "tests",
+      "otherEntityName": "labTest",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "treatments",
+      "otherEntityName": "treatment",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "consultations"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "symptoms",
+      "otherEntityName": "symptom",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipId": 4,
+      "relationshipName": "patients",
+      "otherEntityName": "patient",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "consultationDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "idx",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "diferentialDiagnostic",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160319033830",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

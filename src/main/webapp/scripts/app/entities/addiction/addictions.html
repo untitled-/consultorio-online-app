@@ -1,0 +1,76 @@
+<div>
+    <h2 translate="consultorioOnlineUiApp.addiction.home.title">Addictions</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="addiction.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                        translate="consultorioOnlineUiApp.addiction.home.createLabel">Create new Addiction
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'consultorioOnlineUiApp.addiction.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="consultorioOnlineUiApp.addiction.code">Code</span></th>
+                    <th><span translate="consultorioOnlineUiApp.addiction.name">Name</span></th>
+                    <th><span translate="consultorioOnlineUiApp.addiction.description">Description</span></th>
+                    <th><span translate="consultorioOnlineUiApp.addiction.pathologicBkgs">pathologicBkgs</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="addiction in addictions track by addiction.id">
+                    <td><a ui-sref="addiction.detail({id:addiction.id})">{{addiction.id}}</a></td>
+                    <td>{{addiction.code}}</td>
+                    <td>{{addiction.name}}</td>
+                    <td>{{addiction.description}}</td>
+                    <td>
+                        <a ui-sref="pathologicBkg.detail({id:addiction.pathologicBkgs.id})">{{addiction.pathologicBkgs.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="addiction.detail({id:addiction.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="addiction.edit({id:addiction.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="addiction.delete({id:addiction.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

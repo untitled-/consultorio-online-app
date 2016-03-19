@@ -1,0 +1,31 @@
+{
+    "consultorioOnlineUiApp": {
+        "nonPathologicBkg" : {
+            "home": {
+                "title": "NonPathologicBkgs",
+                "createLabel": "Create a new NonPathologicBkg",
+                "createOrEditLabel": "Create or edit a NonPathologicBkg",
+                "search": "Search for NonPathologicBkg"
+            },
+            "created": "A new NonPathologicBkg is created with identifier {{ param }}",
+            "updated": "A NonPathologicBkg is updated with identifier {{ param }}",
+            "deleted": "A NonPathologicBkg is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete NonPathologicBkg {{ id }}?"
+            },
+            "detail": {
+                "title": "NonPathologicBkg"
+            },
+            "housing": "Housing",
+            "hasZoonosis": "HasZoonosis",
+            "zoonosisDesc": "ZoonosisDesc",
+            "isOvercrowded": "IsOvercrowded",
+            "overcrowdingDesc": "OvercrowdingDesc",
+            "isFeedingBalanced": "IsFeedingBalanced",
+            "feedingDesc": "FeedingDesc",
+            "hygieneDesc": "HygieneDesc",
+            "immunizations": "Immunizations",
+            "patients": "Patients"
+        }
+    }
+}

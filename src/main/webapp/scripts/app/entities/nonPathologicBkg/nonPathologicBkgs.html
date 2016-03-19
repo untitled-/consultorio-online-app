@@ -1,0 +1,82 @@
+<div>
+    <h2 translate="consultorioOnlineUiApp.nonPathologicBkg.home.title">NonPathologicBkgs</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="nonPathologicBkg.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                        translate="consultorioOnlineUiApp.nonPathologicBkg.home.createLabel">Create new NonPathologicBkg
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'consultorioOnlineUiApp.nonPathologicBkg.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="consultorioOnlineUiApp.nonPathologicBkg.housing">Housing</span></th>
+                    <th><span translate="consultorioOnlineUiApp.nonPathologicBkg.hasZoonosis">HasZoonosis</span></th>
+                    <th><span translate="consultorioOnlineUiApp.nonPathologicBkg.zoonosisDesc">ZoonosisDesc</span></th>
+                    <th><span translate="consultorioOnlineUiApp.nonPathologicBkg.isOvercrowded">IsOvercrowded</span></th>
+                    <th><span translate="consultorioOnlineUiApp.nonPathologicBkg.overcrowdingDesc">OvercrowdingDesc</span></th>
+                    <th><span translate="consultorioOnlineUiApp.nonPathologicBkg.isFeedingBalanced">IsFeedingBalanced</span></th>
+                    <th><span translate="consultorioOnlineUiApp.nonPathologicBkg.feedingDesc">FeedingDesc</span></th>
+                    <th><span translate="consultorioOnlineUiApp.nonPathologicBkg.hygieneDesc">HygieneDesc</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="nonPathologicBkg in nonPathologicBkgs track by nonPathologicBkg.id">
+                    <td><a ui-sref="nonPathologicBkg.detail({id:nonPathologicBkg.id})">{{nonPathologicBkg.id}}</a></td>
+                    <td>{{nonPathologicBkg.housing}}</td>
+                    <td>{{nonPathologicBkg.hasZoonosis}}</td>
+                    <td>{{nonPathologicBkg.zoonosisDesc}}</td>
+                    <td>{{nonPathologicBkg.isOvercrowded}}</td>
+                    <td>{{nonPathologicBkg.overcrowdingDesc}}</td>
+                    <td>{{nonPathologicBkg.isFeedingBalanced}}</td>
+                    <td>{{nonPathologicBkg.feedingDesc}}</td>
+                    <td>{{nonPathologicBkg.hygieneDesc}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="nonPathologicBkg.detail({id:nonPathologicBkg.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="nonPathologicBkg.edit({id:nonPathologicBkg.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="nonPathologicBkg.delete({id:nonPathologicBkg.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -26,7 +26,11 @@
             "gender": "Gender",
             "addresss": "Addresss",
             "contacts": "Contacts",
-            "heredoFamilyBkgs": "HeredoFamilyBkgs"
+            "heredoFamilyBkgs": "HeredoFamilyBkgs",
+            "nonPathologicBkgs": "NonPathologicBkgs",
+            "pathologicBkgs": "PathologicBkgs",
+            "gynecoobstetricBkgs": "GynecoobstetricBkgs",
+            "consultations": "Consultations"
         }
     }
 }

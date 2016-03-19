@@ -1,0 +1,24 @@
+{
+    "consultorioOnlineUiApp": {
+        "labTest" : {
+            "home": {
+                "title": "LabTests",
+                "createLabel": "Create a new LabTest",
+                "createOrEditLabel": "Create or edit a LabTest",
+                "search": "Search for LabTest"
+            },
+            "created": "A new LabTest is created with identifier {{ param }}",
+            "updated": "A LabTest is updated with identifier {{ param }}",
+            "deleted": "A LabTest is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete LabTest {{ id }}?"
+            },
+            "detail": {
+                "title": "LabTest"
+            },
+            "name": "Name",
+            "description": "Description",
+            "consultations": "Consultations"
+        }
+    }
+}

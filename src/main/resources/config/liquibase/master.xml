@@ -11,5 +11,19 @@
     <include file="classpath:config/liquibase/changelog/20160312060713_added_entity_Patient.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160312060715_added_entity_Contact.xml" relativeToChangelogFile="false"/>
     
+    <include file="classpath:config/liquibase/changelog/20160319033821_added_entity_NonPathologicBkg.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160319033822_added_entity_Immunization.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160319033823_added_entity_PathologicBkg.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160319033824_added_entity_Alergy.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160319033825_added_entity_Addiction.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160319033826_added_entity_QuirurgicalProcedure.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160319033827_added_entity_Trauma.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160319033829_added_entity_Contraceptives.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160319033832_added_entity_Symptom.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160319033834_added_entity_Drug.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160319033833_added_entity_Treatment.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160319033828_added_entity_GynecoobstetricBkg.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160319033830_added_entity_Consultation.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160319034140_added_entity_LabTest.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
 </databaseChangeLog>

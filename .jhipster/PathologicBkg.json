@@ -1,0 +1,59 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "addictions",
+      "otherEntityName": "addiction",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "pathologicBkgs"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "alergys",
+      "otherEntityName": "alergy",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "pathologicBkgs"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "quirurgicalProcedures",
+      "otherEntityName": "quirurgicalProcedure",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "pathologicBkgs"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipName": "traumas",
+      "otherEntityName": "trauma",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "pathologicBkgs"
+    },
+    {
+      "relationshipId": 5,
+      "relationshipName": "diseases",
+      "otherEntityName": "disease",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipId": 6,
+      "relationshipName": "patients",
+      "otherEntityName": "patient",
+      "relationshipType": "one-to-one",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "pathologicBkgs"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "observations",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160319033823",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

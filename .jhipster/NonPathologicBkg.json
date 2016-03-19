@@ -1,0 +1,65 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "immunizations",
+      "otherEntityName": "immunization",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "nonPathologicBkgs"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "patients",
+      "otherEntityName": "patient",
+      "relationshipType": "one-to-one",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "nonPathologicBkgs"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "housing",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "hasZoonosis",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "zoonosisDesc",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "isOvercrowded",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "overcrowdingDesc",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "isFeedingBalanced",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "feedingDesc",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "hygieneDesc",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160319033821",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

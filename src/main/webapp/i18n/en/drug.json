@@ -1,0 +1,25 @@
+{
+    "consultorioOnlineUiApp": {
+        "drug" : {
+            "home": {
+                "title": "Drugs",
+                "createLabel": "Create a new Drug",
+                "createOrEditLabel": "Create or edit a Drug",
+                "search": "Search for Drug"
+            },
+            "created": "A new Drug is created with identifier {{ param }}",
+            "updated": "A Drug is updated with identifier {{ param }}",
+            "deleted": "A Drug is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Drug {{ id }}?"
+            },
+            "detail": {
+                "title": "Drug"
+            },
+            "code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "treatments": "Treatments"
+        }
+    }
+}

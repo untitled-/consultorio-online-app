@@ -1,0 +1,25 @@
+{
+    "consultorioOnlineUiApp": {
+        "labTest" : {
+            "home": {
+                "title": "LabTests",
+                "createLabel": "Créer un nouveau LabTest",
+                "createOrEditLabel": "Créer ou éditer un LabTest",
+                "search": "Search for LabTest"
+            },
+            "created": "Un nouveau LabTest a été créé avec l'identifiant {{ param }}",
+            "updated": "Le LabTest avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le LabTest avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le LabTest {{ id }} ?"
+            },
+            "detail": {
+                "title": "LabTest"
+            },
+            "name": "Name",
+            "description": "Description",
+            "consultations": "Consultations"
+        }
+    }
+}
+

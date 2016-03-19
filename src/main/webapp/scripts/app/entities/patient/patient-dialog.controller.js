@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('consultorioOnlineUiApp').controller('PatientDialogController',
-    ['$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Patient', 'Address', 'Contact', 'HeredoFamilyBkg',
-        function($scope, $stateParams, $uibModalInstance, $q, entity, Patient, Address, Contact, HeredoFamilyBkg) {
+    ['$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Patient', 'Address', 'Contact', 'HeredoFamilyBkg', 'NonPathologicBkg', 'PathologicBkg', 'GynecoobstetricBkg', 'Consultation',
+        function($scope, $stateParams, $uibModalInstance, $q, entity, Patient, Address, Contact, HeredoFamilyBkg, NonPathologicBkg, PathologicBkg, GynecoobstetricBkg, Consultation) {
 
         $scope.patient = entity;
 		$scope.patients = Patient.query({filter: 'patients-is-null'});
@@ -25,6 +25,26 @@ angular.module('consultorioOnlineUiApp').controller('PatientDialogController',
         }).then(function(heredoFamilyBkgs) {
             $scope.heredofamilybkgss.push(heredoFamilyBkgs);
         });
+        $scope.nonpathologicbkgss = NonPathologicBkg.query({filter: 'patients-is-null'});
+        $q.all([$scope.patients.$promise, $scope.nonpathologicbkgss.$promise]).then(function() {
+            if (!$scope.patients.nonPathologicBkgs || !$scope.patients.nonPathologicBkgs.id) {
+                return $q.reject();
+            }
+            return NonPathologicBkg.get({id : $scope.patients.nonPathologicBkgs.id}).$promise;
+        }).then(function(nonPathologicBkgs) {
+            $scope.nonpathologicbkgss.push(nonPathologicBkgs);
+        });
+        $scope.pathologicbkgss = PathologicBkg.query({filter: 'patients-is-null'});
+        $q.all([$scope.patients.$promise, $scope.pathologicbkgss.$promise]).then(function() {
+            if (!$scope.patients.pathologicBkgs || !$scope.patients.pathologicBkgs.id) {
+                return $q.reject();
+            }
+            return PathologicBkg.get({id : $scope.patients.pathologicBkgs.id}).$promise;
+        }).then(function(pathologicBkgs) {
+            $scope.pathologicbkgss.push(pathologicBkgs);
+        });
+        $scope.gynecoobstetricbkgs = GynecoobstetricBkg.query();
+        $scope.consultations = Consultation.query();
         $scope.load = function(id) {
             Patient.get({id : id}, function(result) {
                 $scope.patient = result;

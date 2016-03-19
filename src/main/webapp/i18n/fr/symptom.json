@@ -1,0 +1,26 @@
+{
+    "consultorioOnlineUiApp": {
+        "symptom" : {
+            "home": {
+                "title": "Symptoms",
+                "createLabel": "Créer un nouveau Symptom",
+                "createOrEditLabel": "Créer ou éditer un Symptom",
+                "search": "Search for Symptom"
+            },
+            "created": "Un nouveau Symptom a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Symptom avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Symptom avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Symptom {{ id }} ?"
+            },
+            "detail": {
+                "title": "Symptom"
+            },
+            "code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "consultations": "Consultations"
+        }
+    }
+}
+

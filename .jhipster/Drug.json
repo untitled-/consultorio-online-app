@@ -1,0 +1,33 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "treatments",
+      "otherEntityName": "treatment",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "drugs"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160319033834",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

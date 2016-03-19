@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="now" value="sysdate" dbms="oracle"/>
+
+    <property name="autoIncrement" value="true" dbms="mysql,h2,postgresql,oracle"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle"/>
+
+    <!--
+        Added the entity Consultation.
+    -->
+    <changeSet id="20160319033830" author="jhipster">
+        <createTable tableName="consultation">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="consultation_date" type="date"/>
+            
+            <column name="idx" type="varchar(255)"/>
+            
+            <column name="diferential_diagnostic" type="varchar(255)"/>
+            
+            <column name="treatments_id" type="bigint">
+                <constraints unique="true"/>
+            </column>
+            <column name="patients_id" type="bigint"/>
+            <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
+        </createTable>
+        
+        <createTable tableName="consultation_tests">
+            <column name="testss_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="consultations_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="consultations_id, testss_id" tableName="consultation_tests"/>
+
+        <addForeignKeyConstraint baseColumnNames="consultations_id"
+                                 baseTableName="consultation_tests"
+                                 constraintName="fk_consultation_tests_labtest_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="consultation"/>
+
+        <addForeignKeyConstraint baseColumnNames="testss_id"
+                                 baseTableName="consultation_tests"
+                                 constraintName="fk_consultation_tests_consultation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="lab_test"/>
+        
+        <addForeignKeyConstraint baseColumnNames="treatments_id"
+                                 baseTableName="consultation"
+                                 constraintName="fk_consultation_treatments_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="treatment"/>
+
+        <createTable tableName="consultation_symptoms">
+            <column name="symptomss_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="consultations_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="consultations_id, symptomss_id" tableName="consultation_symptoms"/>
+
+        <addForeignKeyConstraint baseColumnNames="consultations_id"
+                                 baseTableName="consultation_symptoms"
+                                 constraintName="fk_consultation_symptoms_symptom_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="consultation"/>
+
+        <addForeignKeyConstraint baseColumnNames="symptomss_id"
+                                 baseTableName="consultation_symptoms"
+                                 constraintName="fk_consultation_symptoms_consultation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="symptom"/>
+        
+        <addForeignKeyConstraint baseColumnNames="patients_id"
+                                 baseTableName="consultation"
+                                 constraintName="fk_consultation_patients_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="patient"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,124 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myGynecoobstetricBkgLabel" translate="consultorioOnlineUiApp.gynecoobstetricBkg.home.createOrEditLabel">Create or edit a GynecoobstetricBkg</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="gynecoobstetricBkg.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="consultorioOnlineUiApp.gynecoobstetricBkg.menarche" for="field_menarche">Menarche</label>
+                <div class="input-group">
+                    <input id="field_menarche" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="gynecoobstetricBkg.menarche" is-open="datePickerForMenarche.status.opened"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="datePickerForMenarcheOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="consultorioOnlineUiApp.gynecoobstetricBkg.begginingSexualLife" for="field_begginingSexualLife">BegginingSexualLife</label>
+                <div class="input-group">
+                    <input id="field_begginingSexualLife" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="gynecoobstetricBkg.begginingSexualLife" is-open="datePickerForBegginingSexualLife.status.opened"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="datePickerForBegginingSexualLifeOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="consultorioOnlineUiApp.gynecoobstetricBkg.pregnanciesNumber" for="field_pregnanciesNumber">PregnanciesNumber</label>
+            <input type="number" class="form-control" name="pregnanciesNumber" id="field_pregnanciesNumber"
+                    ng-model="gynecoobstetricBkg.pregnanciesNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="consultorioOnlineUiApp.gynecoobstetricBkg.miscarriagesNumber" for="field_miscarriagesNumber">MiscarriagesNumber</label>
+            <input type="number" class="form-control" name="miscarriagesNumber" id="field_miscarriagesNumber"
+                    ng-model="gynecoobstetricBkg.miscarriagesNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="consultorioOnlineUiApp.gynecoobstetricBkg.cSectionsNumber" for="field_cSectionsNumber">CSectionsNumber</label>
+            <input type="number" class="form-control" name="cSectionsNumber" id="field_cSectionsNumber"
+                    ng-model="gynecoobstetricBkg.cSectionsNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="consultorioOnlineUiApp.gynecoobstetricBkg.pregnancyDetails" for="field_pregnancyDetails">PregnancyDetails</label>
+            <input type="text" class="form-control" name="pregnancyDetails" id="field_pregnancyDetails"
+                    ng-model="gynecoobstetricBkg.pregnancyDetails"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="consultorioOnlineUiApp.gynecoobstetricBkg.latestPapTest" for="field_latestPapTest">LatestPapTest</label>
+                <div class="input-group">
+                    <input id="field_latestPapTest" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="gynecoobstetricBkg.latestPapTest" is-open="datePickerForLatestPapTest.status.opened"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="datePickerForLatestPapTestOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="consultorioOnlineUiApp.gynecoobstetricBkg.latestPapTestDetails" for="field_latestPapTestDetails">LatestPapTestDetails</label>
+            <input type="text" class="form-control" name="latestPapTestDetails" id="field_latestPapTestDetails"
+                    ng-model="gynecoobstetricBkg.latestPapTestDetails"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="consultorioOnlineUiApp.gynecoobstetricBkg.latestMammography" for="field_latestMammography">LatestMammography</label>
+                <div class="input-group">
+                    <input id="field_latestMammography" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="gynecoobstetricBkg.latestMammography" is-open="datePickerForLatestMammography.status.opened"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="datePickerForLatestMammographyOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="consultorioOnlineUiApp.gynecoobstetricBkg.latestMammographyDetails" for="field_latestMammographyDetails">LatestMammographyDetails</label>
+            <input type="text" class="form-control" name="latestMammographyDetails" id="field_latestMammographyDetails"
+                    ng-model="gynecoobstetricBkg.latestMammographyDetails"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="consultorioOnlineUiApp.gynecoobstetricBkg.usesContraceptives" for="field_usesContraceptives">UsesContraceptives</label>
+            <input type="checkbox" class="form-control" name="usesContraceptives" id="field_usesContraceptives"
+                    ng-model="gynecoobstetricBkg.usesContraceptives"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="consultorioOnlineUiApp.gynecoobstetricBkg.hasMenopause" for="field_hasMenopause">HasMenopause</label>
+            <input type="checkbox" class="form-control" name="hasMenopause" id="field_hasMenopause"
+                    ng-model="gynecoobstetricBkg.hasMenopause"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="consultorioOnlineUiApp.gynecoobstetricBkg.contraceptivess" for="field_contraceptivess">contraceptivess</label>
+            <select class="form-control" id="field_contraceptivess" multiple name="contraceptivess" ng-model="gynecoobstetricBkg.contraceptivesss" ng-options="contraceptives as contraceptives.id for contraceptives in contraceptivess track by contraceptives.id"></select>
+        </div>
+        <div class="form-group">
+            <label translate="consultorioOnlineUiApp.gynecoobstetricBkg.patients" for="field_patients">patients</label>
+            <select class="form-control" id="field_patients" name="patients" ng-model="gynecoobstetricBkg.patients" ng-options="patient as patient.id for patient in patients track by patient.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

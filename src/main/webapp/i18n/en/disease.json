@@ -22,7 +22,8 @@
             "type": "Type",
             "isCongenital": "IsCongenital",
             "isInfectious": "IsInfectious",
-            "heredoFamilyBkgs": "HeredoFamilyBkgs"
+            "heredoFamilyBkgs": "HeredoFamilyBkgs",
+            "pathologicBkgs": "PathologicBkgs"
         }
     }
 }

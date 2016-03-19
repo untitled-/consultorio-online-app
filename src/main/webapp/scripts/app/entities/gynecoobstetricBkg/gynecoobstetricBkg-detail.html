@@ -1,0 +1,136 @@
+
+<div>
+    <h2><span translate="consultorioOnlineUiApp.gynecoobstetricBkg.detail.title">GynecoobstetricBkg</span> {{gynecoobstetricBkg.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.gynecoobstetricBkg.menarche">Menarche</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{gynecoobstetricBkg.menarche | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.gynecoobstetricBkg.begginingSexualLife">BegginingSexualLife</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{gynecoobstetricBkg.begginingSexualLife | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.gynecoobstetricBkg.pregnanciesNumber">PregnanciesNumber</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{gynecoobstetricBkg.pregnanciesNumber}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.gynecoobstetricBkg.miscarriagesNumber">MiscarriagesNumber</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{gynecoobstetricBkg.miscarriagesNumber}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.gynecoobstetricBkg.cSectionsNumber">CSectionsNumber</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{gynecoobstetricBkg.cSectionsNumber}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.gynecoobstetricBkg.pregnancyDetails">PregnancyDetails</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{gynecoobstetricBkg.pregnancyDetails}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.gynecoobstetricBkg.latestPapTest">LatestPapTest</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{gynecoobstetricBkg.latestPapTest | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.gynecoobstetricBkg.latestPapTestDetails">LatestPapTestDetails</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{gynecoobstetricBkg.latestPapTestDetails}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.gynecoobstetricBkg.latestMammography">LatestMammography</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{gynecoobstetricBkg.latestMammography | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.gynecoobstetricBkg.latestMammographyDetails">LatestMammographyDetails</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{gynecoobstetricBkg.latestMammographyDetails}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.gynecoobstetricBkg.usesContraceptives">UsesContraceptives</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{gynecoobstetricBkg.usesContraceptives}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.gynecoobstetricBkg.hasMenopause">HasMenopause</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{gynecoobstetricBkg.hasMenopause}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.gynecoobstetricBkg.contraceptivess">contraceptivess</span>
+                </td>
+                <td>
+                    <span ng-repeat="contraceptivess in gynecoobstetricBkg.contraceptivesss">
+                        <a class="form-control-static" ui-sref="contraceptives.detail({id: {{contraceptivess.id}}})">{{contraceptivess.id}}</a>{{$last ? '' : ', '}}
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineUiApp.gynecoobstetricBkg.patients">patients</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="patient.detail({id:gynecoobstetricBkg.patients.id})">{{gynecoobstetricBkg.patients.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

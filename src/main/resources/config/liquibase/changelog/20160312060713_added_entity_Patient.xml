@@ -43,6 +43,12 @@
             <column name="heredo_family_bkgs_id" type="bigint">
                 <constraints unique="true"/>
             </column>
+            <column name="non_pathologic_bkgs_id" type="bigint">
+                <constraints unique="true"/>
+            </column>
+            <column name="pathologic_bkgs_id" type="bigint">
+                <constraints unique="true"/>
+            </column>
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
         </createTable>
         
@@ -57,6 +63,18 @@
                                  constraintName="fk_patient_heredofamilybkgs_id"
                                  referencedColumnNames="id"
                                  referencedTableName="heredo_family_bkg"/>
+
+        <addForeignKeyConstraint baseColumnNames="non_pathologic_bkgs_id"
+                                 baseTableName="patient"
+                                 constraintName="fk_patient_nonpathologicbkgs_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="non_pathologic_bkg"/>
+
+        <addForeignKeyConstraint baseColumnNames="pathologic_bkgs_id"
+                                 baseTableName="patient"
+                                 constraintName="fk_patient_pathologicbkgs_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pathologic_bkg"/>
 
     </changeSet>
 </databaseChangeLog>

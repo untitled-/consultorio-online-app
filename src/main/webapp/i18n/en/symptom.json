@@ -1,0 +1,25 @@
+{
+    "consultorioOnlineUiApp": {
+        "symptom" : {
+            "home": {
+                "title": "Symptoms",
+                "createLabel": "Create a new Symptom",
+                "createOrEditLabel": "Create or edit a Symptom",
+                "search": "Search for Symptom"
+            },
+            "created": "A new Symptom is created with identifier {{ param }}",
+            "updated": "A Symptom is updated with identifier {{ param }}",
+            "deleted": "A Symptom is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Symptom {{ id }}?"
+            },
+            "detail": {
+                "title": "Symptom"
+            },
+            "code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "consultations": "Consultations"
+        }
+    }
+}

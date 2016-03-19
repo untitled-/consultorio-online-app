@@ -69,6 +69,22 @@ public class Patient implements Serializable {
     @OneToOne
     private HeredoFamilyBkg heredoFamilyBkgs;
 
+    @OneToOne
+    private NonPathologicBkg nonPathologicBkgs;
+
+    @OneToOne
+    private PathologicBkg pathologicBkgs;
+
+    @OneToMany(mappedBy = "patients")
+    @JsonIgnore
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<GynecoobstetricBkg> gynecoobstetricBkgss = new HashSet<>();
+
+    @OneToMany(mappedBy = "patients")
+    @JsonIgnore
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<Consultation> consultationss = new HashSet<>();
+
     public Long getId() {
         return id;
     }
@@ -163,6 +179,38 @@ public class Patient implements Serializable {
 
     public void setHeredoFamilyBkgs(HeredoFamilyBkg heredoFamilyBkg) {
         this.heredoFamilyBkgs = heredoFamilyBkg;
+    }
+
+    public NonPathologicBkg getNonPathologicBkgs() {
+        return nonPathologicBkgs;
+    }
+
+    public void setNonPathologicBkgs(NonPathologicBkg nonPathologicBkg) {
+        this.nonPathologicBkgs = nonPathologicBkg;
+    }
+
+    public PathologicBkg getPathologicBkgs() {
+        return pathologicBkgs;
+    }
+
+    public void setPathologicBkgs(PathologicBkg pathologicBkg) {
+        this.pathologicBkgs = pathologicBkg;
+    }
+
+    public Set<GynecoobstetricBkg> getGynecoobstetricBkgss() {
+        return gynecoobstetricBkgss;
+    }
+
+    public void setGynecoobstetricBkgss(Set<GynecoobstetricBkg> gynecoobstetricBkgs) {
+        this.gynecoobstetricBkgss = gynecoobstetricBkgs;
+    }
+
+    public Set<Consultation> getConsultationss() {
+        return consultationss;
+    }
+
+    public void setConsultationss(Set<Consultation> consultations) {
+        this.consultationss = consultations;
     }
 
     @Override

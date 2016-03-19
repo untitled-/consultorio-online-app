@@ -1,0 +1,26 @@
+{
+    "consultorioOnlineUiApp": {
+        "drug" : {
+            "home": {
+                "title": "Drugs",
+                "createLabel": "Créer un nouveau Drug",
+                "createOrEditLabel": "Créer ou éditer un Drug",
+                "search": "Search for Drug"
+            },
+            "created": "Un nouveau Drug a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Drug avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Drug avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Drug {{ id }} ?"
+            },
+            "detail": {
+                "title": "Drug"
+            },
+            "code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "treatments": "Treatments"
+        }
+    }
+}
+

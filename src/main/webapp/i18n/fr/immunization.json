@@ -1,0 +1,26 @@
+{
+    "consultorioOnlineUiApp": {
+        "immunization" : {
+            "home": {
+                "title": "Immunizations",
+                "createLabel": "Créer un nouveau Immunization",
+                "createOrEditLabel": "Créer ou éditer un Immunization",
+                "search": "Search for Immunization"
+            },
+            "created": "Un nouveau Immunization a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Immunization avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Immunization avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Immunization {{ id }} ?"
+            },
+            "detail": {
+                "title": "Immunization"
+            },
+            "code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "nonPathologicBkgs": "NonPathologicBkgs"
+        }
+    }
+}
+

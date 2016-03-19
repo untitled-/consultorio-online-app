@@ -1,0 +1,24 @@
+{
+    "consultorioOnlineUiApp": {
+        "contraceptives" : {
+            "home": {
+                "title": "Contraceptivess",
+                "createLabel": "Créer un nouveau Contraceptives",
+                "createOrEditLabel": "Créer ou éditer un Contraceptives",
+                "search": "Search for Contraceptives"
+            },
+            "created": "Un nouveau Contraceptives a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Contraceptives avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Contraceptives avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Contraceptives {{ id }} ?"
+            },
+            "detail": {
+                "title": "Contraceptives"
+            },
+            "name": "Name",
+            "gynecoobstetricBkgs": "GynecoobstetricBkgs"
+        }
+    }
+}
+

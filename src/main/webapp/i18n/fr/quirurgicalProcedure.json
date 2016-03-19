@@ -1,0 +1,26 @@
+{
+    "consultorioOnlineUiApp": {
+        "quirurgicalProcedure" : {
+            "home": {
+                "title": "QuirurgicalProcedures",
+                "createLabel": "Créer un nouveau QuirurgicalProcedure",
+                "createOrEditLabel": "Créer ou éditer un QuirurgicalProcedure",
+                "search": "Search for QuirurgicalProcedure"
+            },
+            "created": "Un nouveau QuirurgicalProcedure a été créé avec l'identifiant {{ param }}",
+            "updated": "Le QuirurgicalProcedure avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le QuirurgicalProcedure avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le QuirurgicalProcedure {{ id }} ?"
+            },
+            "detail": {
+                "title": "QuirurgicalProcedure"
+            },
+            "code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "pathologicBkgs": "PathologicBkgs"
+        }
+    }
+}
+

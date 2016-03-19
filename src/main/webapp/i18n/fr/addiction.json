@@ -1,0 +1,26 @@
+{
+    "consultorioOnlineUiApp": {
+        "addiction" : {
+            "home": {
+                "title": "Addictions",
+                "createLabel": "Créer un nouveau Addiction",
+                "createOrEditLabel": "Créer ou éditer un Addiction",
+                "search": "Search for Addiction"
+            },
+            "created": "Un nouveau Addiction a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Addiction avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Addiction avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Addiction {{ id }} ?"
+            },
+            "detail": {
+                "title": "Addiction"
+            },
+            "code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "pathologicBkgs": "PathologicBkgs"
+        }
+    }
+}
+

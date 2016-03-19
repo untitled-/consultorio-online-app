@@ -1,0 +1,33 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "consultations",
+      "otherEntityName": "consultation",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "symptoms"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160319033832",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

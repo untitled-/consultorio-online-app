@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('consultorioOnlineUiApp')
-    .controller('PatientDetailController', function ($scope, $rootScope, $stateParams, entity, Patient, Address, Contact, HeredoFamilyBkg) {
+    .controller('PatientDetailController', function ($scope, $rootScope, $stateParams, entity, Patient, Address, Contact, HeredoFamilyBkg, NonPathologicBkg, PathologicBkg, GynecoobstetricBkg, Consultation) {
         $scope.patient = entity;
         $scope.load = function (id) {
             Patient.get({id: id}, function(result) {

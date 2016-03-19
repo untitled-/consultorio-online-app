@@ -47,6 +47,11 @@ public class Disease implements Serializable {
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<HeredoFamilyBkg> heredoFamilyBkgss = new HashSet<>();
 
+    @ManyToMany(mappedBy = "diseasess")
+    @JsonIgnore
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<PathologicBkg> pathologicBkgss = new HashSet<>();
+
     public Long getId() {
         return id;
     }
@@ -109,6 +114,14 @@ public class Disease implements Serializable {
 
     public void setHeredoFamilyBkgss(Set<HeredoFamilyBkg> heredoFamilyBkgs) {
         this.heredoFamilyBkgss = heredoFamilyBkgs;
+    }
+
+    public Set<PathologicBkg> getPathologicBkgss() {
+        return pathologicBkgss;
+    }
+
+    public void setPathologicBkgss(Set<PathologicBkg> pathologicBkgs) {
+        this.pathologicBkgss = pathologicBkgs;
     }
 
     @Override

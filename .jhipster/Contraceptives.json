@@ -1,0 +1,23 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "gynecoobstetricBkgs",
+      "otherEntityName": "gynecoobstetricBkg",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "contraceptivess"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160319033829",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}
