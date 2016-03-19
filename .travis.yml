@@ -6,6 +6,7 @@ before_install:
   - npm install grunt-cli -g 
   - npm install protractor -g
   - npm install bower -g  
+  - bower install
 install: npm install
 before_script: grunt build --verbose
 notifications:
