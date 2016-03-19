@@ -1,11 +1,15 @@
-language: node_js
+language:
+- java
+- node_js
 node_js:
 - '0.12'
 sudo: false
 before_install:
 - npm install grunt-cli -g
 install: npm install
-before_script: grunt build --verbose
+before_script: 
+- grunt build
+- mvn install
 notifications:
   webhooks:
     on_success: change
