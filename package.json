@@ -8,6 +8,7 @@
     "src/main/webapp/bower_components"
   ],
   "dependencies": {
+    "protractor": "^3.2.1",
     "bower": "^1.6.3"
   },
   "devDependencies": {
@@ -54,7 +55,6 @@
     "load-grunt-tasks": "3.3.0",
     "lodash": "3.10.1",
     "phantomjs": "1.9.18",
-    "protractor": "^3.2.1",
     "protractor-jasmine2-screenshot-reporter": "0.1.7",
     "requirejs": "2.1",
     "time-grunt": "1.2.2",
@@ -68,6 +68,6 @@
   },
   "scripts": {
     "test": "grunt test",
-    "postinstall": "webdriver-manager update"
+    "postinstall": "./node_modules/bower/bin/bower install && ./node_modules/protractor/bin/webdriver-manager update"
   }
 }
