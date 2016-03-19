@@ -7,7 +7,7 @@ before_install:
   - npm install protractor -g
   - npm install bower -g  
 install: npm install
-before_script: grunt build
+before_script: grunt build --verbose
 notifications:
   webhooks:
     on_success: change
