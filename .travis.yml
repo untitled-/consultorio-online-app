@@ -9,7 +9,7 @@ before_install:
 install: npm install
 before_script: 
 - grunt build
-- mvn clean install
+- mvn clean install 
 notifications:
   webhooks:
     on_success: change
