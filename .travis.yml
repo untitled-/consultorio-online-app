@@ -5,9 +5,7 @@ jdk:
 sudo: false
 before_install:
 - npm install grunt-cli -g
-install: npm install
 before_script: 
-- grunt build
 - mvn clean install 
 notifications:
   webhooks:
