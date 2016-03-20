@@ -6,9 +6,8 @@ sudo: false
 env:
   - MAVEN_CUSTOM_OPTS="-Pprod,heroku -DskipTests"
 before_install:
-- rm -fr node_modules
+- rm -fr /home/travis/.npm/
 - npm cache clean -g
-- npm install node-gyp
 - npm install grunt-cli -g
 - npm install
 install:
