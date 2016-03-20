@@ -19,14 +19,14 @@ spring:
         livereload:
             enabled: false
     datasource:
-        driver-class-name: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
-        url: jdbc:mysql://localhost:3306/consultorio_online_ui?useUnicode=true&characterEncoding=utf8
-        name:
-        username: root
-        password:
+        driver-class-name: org.postgresql.ds.PGSimpleDataSource
+        url: postgres://csnskctohvwlgz:iXUjMMIUUCEkMnxUpkh9X_oRYm@ec2-54-83-56-31.compute-1.amazonaws.com:5432/dbdd7h4ckcehfh
+        name: dbdd7h4ckcehfh
+        username: csnskctohvwlgz
+        password: iXUjMMIUUCEkMnxUpkh9X_oRYm
     jpa:
-        database-platform: org.hibernate.dialect.MySQLInnoDBDialect
-        database: MYSQL
+        database-platform: com.untitled.consultorio.domain.util.FixedPostgreSQL82Dialect
+        database: POSTGRESQL
         show_sql: false
         properties:
             hibernate.cache.use_second_level_cache: true
