@@ -8,8 +8,6 @@ env:
 before_install:
 - npm install grunt-cli -g
 install:
-- true
-script: 
 - mvn package -Pprod -DskipTests 
 notifications:
   webhooks:
