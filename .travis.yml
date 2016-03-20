@@ -6,7 +6,7 @@ sudo: false
 env:
   - MAVEN_CUSTOM_OPTS="-Pprod,heroku -DskipTests"
 before_install:
-- rm -rf -- node_modules
+- npm cache clean
 - npm install grunt-cli -g
 - npm install
 install:
