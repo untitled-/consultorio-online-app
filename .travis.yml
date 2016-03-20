@@ -6,6 +6,7 @@ sudo: false
 env:
   - MAVEN_CUSTOM_OPTS="-Pprod,heroku -DskipTests"
 before_install:
+- rm -rf -- node_modules
 - npm install grunt-cli -g
 - npm install
 install:
@@ -23,4 +24,4 @@ deploy:
   app: consultorio-online-app
   on:
     repo: untitled-/consultorio-online-app
-  
+  skip_cleanup: true
