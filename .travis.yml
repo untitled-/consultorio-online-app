@@ -10,6 +10,7 @@ before_install:
 - npm install
 install:
 - mvn package -Pprod -DskipTests 
+script: true
 notifications:
   webhooks:
     on_success: change
