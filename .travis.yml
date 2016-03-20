@@ -6,7 +6,7 @@ sudo: false
 before_install:
 - npm install grunt-cli -g
 before_script: 
-- mvn clean install 
+- mvn package -Pprod -DskipTests 
 notifications:
   webhooks:
     on_success: change
