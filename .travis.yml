@@ -4,11 +4,13 @@ jdk:
   - oraclejdk8
 sudo: false
 env:
-  - MAVEN_CUSTOM_OPTS="-Pprod -DskipTests"
+  - MAVEN_CUSTOM_OPTS="-Pprod,heroku -DskipTests"
 before_install:
 - npm install grunt-cli -g
-before_script: 
-- 
+install:
+- true
+script: 
+- mvn package -Pprod -DskipTests 
 notifications:
   webhooks:
     on_success: change
