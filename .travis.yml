@@ -8,6 +8,7 @@ env:
 before_install:
 - rm -fr node_modules
 - npm cache clean -g
+- npm node-gyp install
 - npm install grunt-cli -g
 - npm install
 install:
