@@ -63,14 +63,14 @@ jhipster:
         #allow-credentials: true
         #max-age: 1800
     mail:
-        from: consultorio_online_ui@localhost
+        from: consultorio_online_app@localhost
     security:
         rememberme:
             # security key (this key should be unique for your application, and kept secret)
-            key: 1352621ceb0245c583294012345905fbc4507854
+            key: 5d265833b125c16344e3dd736ad890d845fff9fe
     swagger:
-        title: consultorio_online_ui API
-        description: consultorio_online_ui API documentation
+        title: consultorio_online_app API
+        description: consultorio_online_app API documentation
         version: 0.0.1
         termsOfServiceUrl:
         contact:

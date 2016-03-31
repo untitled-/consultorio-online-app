@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('HealthModalController', function($scope, $uibModalInstance, currentHealth, baseName, subSystemName) {
 
         $scope.currentHealth = currentHealth;

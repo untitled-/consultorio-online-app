@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('AddressController', function ($scope, $state, Address, AddressSearch) {
 
         $scope.addresss = [];

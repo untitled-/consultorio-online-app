@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .filter('capitalize', function () {
         return function (input, scope) {
             if (input != null)

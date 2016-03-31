@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .factory('HeredoFamilyBkg', function ($resource, DateUtils) {
         return $resource('api/heredoFamilyBkgs/:id', {}, {
             'query': { method: 'GET', isArray: true},

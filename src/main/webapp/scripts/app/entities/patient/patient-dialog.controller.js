@@ -1,11 +1,10 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp').controller('PatientDialogController',
+angular.module('consultorioOnlineAppApp').controller('PatientDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'Patient', 'Address', 'Contact', 'HeredoFamilyBkg', 'NonPathologicBkg', 'PathologicBkg', 'GynecoobstetricBkg', 'Consultation',
         function($scope, $stateParams, $uibModalInstance, $q, entity, Patient, Address, Contact, HeredoFamilyBkg, NonPathologicBkg, PathologicBkg, GynecoobstetricBkg, Consultation) {
 
         $scope.patient = entity;
-		$scope.patients = Patient.query({filter: 'patients-is-null'});
         $scope.addressss = Address.query({filter: 'patients-is-null'});
         $q.all([$scope.patients.$promise, $scope.addressss.$promise]).then(function() {
             if (!$scope.patients.addresss || !$scope.patients.addresss.id) {
@@ -52,7 +51,7 @@ angular.module('consultorioOnlineUiApp').controller('PatientDialogController',
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('consultorioOnlineUiApp:patientUpdate', result);
+            $scope.$emit('consultorioOnlineAppApp:patientUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp').controller('SymptomDialogController',
+angular.module('consultorioOnlineAppApp').controller('SymptomDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Symptom', 'Consultation',
         function($scope, $stateParams, $uibModalInstance, entity, Symptom, Consultation) {
 
@@ -13,7 +13,7 @@ angular.module('consultorioOnlineUiApp').controller('SymptomDialogController',
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('consultorioOnlineUiApp:symptomUpdate', result);
+            $scope.$emit('consultorioOnlineAppApp:symptomUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };

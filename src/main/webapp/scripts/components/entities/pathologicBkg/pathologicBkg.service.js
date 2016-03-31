@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .factory('PathologicBkg', function ($resource, DateUtils) {
         return $resource('api/pathologicBkgs/:id', {}, {
             'query': { method: 'GET', isArray: true},

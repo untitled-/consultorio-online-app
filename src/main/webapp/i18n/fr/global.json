@@ -1,6 +1,6 @@
 {
     "global": {
-        "title": "Consultorio Online",
+        "title": "consultorio_online_app",
         "browsehappy": "Vous utilisez un <strong>ancien</strong> navigateur. Veuillez <a href=\"http://browsehappy.com/?locale=fr\">mettre à jour votre navigateur</a> pour une meilleure expérience.",
         "menu": {
             "home": "Accueil",
@@ -8,10 +8,7 @@
             "entities": {
                 "main": "Entités",
                 "address": "Address",
-                "contact": "Contact",
-                "patient": "Patient",
                 "disease": "Disease",
-                "heredoFamilyBkg": "HeredoFamilyBkg",
                 "nonPathologicBkg": "NonPathologicBkg",
                 "immunization": "Immunization",
                 "pathologicBkg": "PathologicBkg",
@@ -20,12 +17,15 @@
                 "quirurgicalProcedure": "QuirurgicalProcedure",
                 "trauma": "Trauma",
                 "contraceptives": "Contraceptives",
+                "labTest": "LabTest",
                 "symptom": "Symptom",
                 "drug": "Drug",
+                "heredoFamilyBkg": "HeredoFamilyBkg",
                 "treatment": "Treatment",
+                "patient": "Patient",
+                "contact": "Contact",
                 "gynecoobstetricBkg": "GynecoobstetricBkg",
                 "consultation": "Consultation",
-                "labTest": "LabTest",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

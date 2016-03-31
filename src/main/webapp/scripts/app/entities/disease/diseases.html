@@ -1,5 +1,5 @@
 <div>
-    <h2 translate="consultorioOnlineUiApp.disease.home.title">Diseases</h2>
+    <h2 translate="consultorioOnlineAppApp.disease.home.title">Diseases</h2>
     <jh-alert></jh-alert>
     <div class="container-fluid">
         <div class="row">
@@ -7,14 +7,14 @@
                 <button class="btn btn-primary" ui-sref="disease.new" >
                     <span class="glyphicon glyphicon-plus"></span>
                     <span 
-class="hidden-xs"                        translate="consultorioOnlineUiApp.disease.home.createLabel">Create new Disease
+class="hidden-xs"                        translate="consultorioOnlineAppApp.disease.home.createLabel">Create new Disease
                     </span>
                 </button>
             </div>
             <div class="col-xs-8 no-padding-right">
                 <form name="searchForm" class="form-inline">
                     <div class="input-group pull-right" >
-                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'consultorioOnlineUiApp.disease.home.search' | translate }}">
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'consultorioOnlineAppApp.disease.home.search' | translate }}">
                         <span  class="input-group-btn width-min" >
                             <button class="btn btn-info" ng-click="search()">
                                 <span class="glyphicon glyphicon-search"></span>
@@ -31,12 +31,12 @@ class="hidden-xs"                        translate="consultorioOnlineUiApp.disea
             <thead>
                 <tr>
                     <th><span translate="global.field.id">ID</span></th>
-                    <th><span translate="consultorioOnlineUiApp.disease.code">Code</span></th>
-                    <th><span translate="consultorioOnlineUiApp.disease.name">Name</span></th>
-                    <th><span translate="consultorioOnlineUiApp.disease.description">Description</span></th>
-                    <th><span translate="consultorioOnlineUiApp.disease.type">Type</span></th>
-                    <th><span translate="consultorioOnlineUiApp.disease.isCongenital">IsCongenital</span></th>
-                    <th><span translate="consultorioOnlineUiApp.disease.isInfectious">IsInfectious</span></th>
+                    <th><span translate="consultorioOnlineAppApp.disease.code">Code</span></th>
+                    <th><span translate="consultorioOnlineAppApp.disease.name">Name</span></th>
+                    <th><span translate="consultorioOnlineAppApp.disease.description">Description</span></th>
+                    <th><span translate="consultorioOnlineAppApp.disease.type">Type</span></th>
+                    <th><span translate="consultorioOnlineAppApp.disease.isCongenital">IsCongenital</span></th>
+                    <th><span translate="consultorioOnlineAppApp.disease.isInfectious">IsInfectious</span></th>
                     <th></th>
                 </tr>
             </thead>

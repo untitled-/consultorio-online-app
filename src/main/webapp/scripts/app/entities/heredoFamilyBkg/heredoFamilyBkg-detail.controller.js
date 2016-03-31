@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('HeredoFamilyBkgDetailController', function ($scope, $rootScope, $stateParams, entity, HeredoFamilyBkg, Disease, Patient) {
         $scope.heredoFamilyBkg = entity;
         $scope.load = function (id) {
@@ -8,7 +8,7 @@ angular.module('consultorioOnlineUiApp')
                 $scope.heredoFamilyBkg = result;
             });
         };
-        var unsubscribe = $rootScope.$on('consultorioOnlineUiApp:heredoFamilyBkgUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('consultorioOnlineAppApp:heredoFamilyBkgUpdate', function(event, result) {
             $scope.heredoFamilyBkg = result;
         });
         $scope.$on('$destroy', unsubscribe);

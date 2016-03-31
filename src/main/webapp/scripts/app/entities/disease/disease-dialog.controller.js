@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp').controller('DiseaseDialogController',
+angular.module('consultorioOnlineAppApp').controller('DiseaseDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Disease', 'HeredoFamilyBkg', 'PathologicBkg',
         function($scope, $stateParams, $uibModalInstance, entity, Disease, HeredoFamilyBkg, PathologicBkg) {
 
@@ -14,7 +14,7 @@ angular.module('consultorioOnlineUiApp').controller('DiseaseDialogController',
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('consultorioOnlineUiApp:diseaseUpdate', result);
+            $scope.$emit('consultorioOnlineAppApp:diseaseUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };

@@ -10,27 +10,27 @@ public class HeaderUtil {
 
     public static HttpHeaders createAlert(String message, String param) {
         HttpHeaders headers = new HttpHeaders();
-        headers.add("X-consultorioOnlineUiApp-alert", message);
-        headers.add("X-consultorioOnlineUiApp-params", param);
+        headers.add("X-consultorioOnlineAppApp-alert", message);
+        headers.add("X-consultorioOnlineAppApp-params", param);
         return headers;
     }
 
     public static HttpHeaders createEntityCreationAlert(String entityName, String param) {
-        return createAlert("consultorioOnlineUiApp." + entityName + ".created", param);
+        return createAlert("consultorioOnlineAppApp." + entityName + ".created", param);
     }
 
     public static HttpHeaders createEntityUpdateAlert(String entityName, String param) {
-        return createAlert("consultorioOnlineUiApp." + entityName + ".updated", param);
+        return createAlert("consultorioOnlineAppApp." + entityName + ".updated", param);
     }
 
     public static HttpHeaders createEntityDeletionAlert(String entityName, String param) {
-        return createAlert("consultorioOnlineUiApp." + entityName + ".deleted", param);
+        return createAlert("consultorioOnlineAppApp." + entityName + ".deleted", param);
     }
 
     public static HttpHeaders createFailureAlert(String entityName, String errorKey, String defaultMessage) {
         HttpHeaders headers = new HttpHeaders();
-        headers.add("X-consultorioOnlineUiApp-error", "error." + errorKey);
-        headers.add("X-consultorioOnlineUiApp-params", entityName);
+        headers.add("X-consultorioOnlineAppApp-error", "error." + errorKey);
+        headers.add("X-consultorioOnlineAppApp-params", entityName);
         return headers;
     }
 }

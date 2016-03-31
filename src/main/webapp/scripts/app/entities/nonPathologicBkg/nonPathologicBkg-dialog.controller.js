@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp').controller('NonPathologicBkgDialogController',
+angular.module('consultorioOnlineAppApp').controller('NonPathologicBkgDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'NonPathologicBkg', 'Immunization', 'Patient',
         function($scope, $stateParams, $uibModalInstance, entity, NonPathologicBkg, Immunization, Patient) {
 
@@ -14,7 +14,7 @@ angular.module('consultorioOnlineUiApp').controller('NonPathologicBkgDialogContr
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('consultorioOnlineUiApp:nonPathologicBkgUpdate', result);
+            $scope.$emit('consultorioOnlineAppApp:nonPathologicBkgUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };

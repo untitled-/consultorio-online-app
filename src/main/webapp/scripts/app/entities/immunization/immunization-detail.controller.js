@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('ImmunizationDetailController', function ($scope, $rootScope, $stateParams, entity, Immunization, NonPathologicBkg) {
         $scope.immunization = entity;
         $scope.load = function (id) {
@@ -8,7 +8,7 @@ angular.module('consultorioOnlineUiApp')
                 $scope.immunization = result;
             });
         };
-        var unsubscribe = $rootScope.$on('consultorioOnlineUiApp:immunizationUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('consultorioOnlineAppApp:immunizationUpdate', function(event, result) {
             $scope.immunization = result;
         });
         $scope.$on('$destroy', unsubscribe);

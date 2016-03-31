@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('QuirurgicalProcedureDetailController', function ($scope, $rootScope, $stateParams, entity, QuirurgicalProcedure, PathologicBkg) {
         $scope.quirurgicalProcedure = entity;
         $scope.load = function (id) {
@@ -8,7 +8,7 @@ angular.module('consultorioOnlineUiApp')
                 $scope.quirurgicalProcedure = result;
             });
         };
-        var unsubscribe = $rootScope.$on('consultorioOnlineUiApp:quirurgicalProcedureUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('consultorioOnlineAppApp:quirurgicalProcedureUpdate', function(event, result) {
             $scope.quirurgicalProcedure = result;
         });
         $scope.$on('$destroy', unsubscribe);

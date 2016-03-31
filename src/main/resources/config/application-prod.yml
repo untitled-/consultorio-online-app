@@ -19,11 +19,11 @@ spring:
         livereload:
             enabled: false
     datasource:
-        driver-class-name: org.postgresql.ds.PGSimpleDataSource
-        url: postgres://csnskctohvwlgz:iXUjMMIUUCEkMnxUpkh9X_oRYm@ec2-54-83-56-31.compute-1.amazonaws.com:5432/dbdd7h4ckcehfh
-        name: dbdd7h4ckcehfh
-        username: csnskctohvwlgz
-        password: iXUjMMIUUCEkMnxUpkh9X_oRYm
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://ec2-204-236-228-77.compute-1.amazonaws.com:5432/dbof90ei40aoiu?sslmode=require
+        name: dbof90ei40aoiu
+        username: cwawqxjlowbyxq
+        password: 3ble5KHyI1seqaa07botpawz2v
     jpa:
         database-platform: com.untitled.consultorio.domain.util.FixedPostgreSQL82Dialect
         database: POSTGRESQL
@@ -67,7 +67,7 @@ jhipster:
         ehcache:
             maxBytesLocalHeap: 256M
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: consultorio_online_ui@localhost
+        from: consultorio_online_app@localhost
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
         spark:
@@ -78,4 +78,4 @@ jhipster:
             enabled: false
             host: localhost
             port: 2003
-            prefix: consultorio_online_ui
+            prefix: consultorio_online_app

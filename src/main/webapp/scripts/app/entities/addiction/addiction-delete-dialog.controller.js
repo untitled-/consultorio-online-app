@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
 	.controller('AddictionDeleteController', function($scope, $uibModalInstance, entity, Addiction) {
 
         $scope.addiction = entity;

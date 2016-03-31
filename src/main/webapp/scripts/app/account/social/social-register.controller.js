@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('SocialRegisterController', function ($scope, $filter, $stateParams) {
         $scope.provider = $stateParams.provider;
         $scope.providerLabel = $filter('capitalize')($scope.provider);

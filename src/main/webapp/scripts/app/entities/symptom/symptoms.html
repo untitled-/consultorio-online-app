@@ -1,5 +1,5 @@
 <div>
-    <h2 translate="consultorioOnlineUiApp.symptom.home.title">Symptoms</h2>
+    <h2 translate="consultorioOnlineAppApp.symptom.home.title">Symptoms</h2>
     <jh-alert></jh-alert>
     <div class="container-fluid">
         <div class="row">
@@ -7,14 +7,14 @@
                 <button class="btn btn-primary" ui-sref="symptom.new" >
                     <span class="glyphicon glyphicon-plus"></span>
                     <span 
-class="hidden-xs"                        translate="consultorioOnlineUiApp.symptom.home.createLabel">Create new Symptom
+class="hidden-xs"                        translate="consultorioOnlineAppApp.symptom.home.createLabel">Create new Symptom
                     </span>
                 </button>
             </div>
             <div class="col-xs-8 no-padding-right">
                 <form name="searchForm" class="form-inline">
                     <div class="input-group pull-right" >
-                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'consultorioOnlineUiApp.symptom.home.search' | translate }}">
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'consultorioOnlineAppApp.symptom.home.search' | translate }}">
                         <span  class="input-group-btn width-min" >
                             <button class="btn btn-info" ng-click="search()">
                                 <span class="glyphicon glyphicon-search"></span>
@@ -31,9 +31,9 @@ class="hidden-xs"                        translate="consultorioOnlineUiApp.sympt
             <thead>
                 <tr>
                     <th><span translate="global.field.id">ID</span></th>
-                    <th><span translate="consultorioOnlineUiApp.symptom.code">Code</span></th>
-                    <th><span translate="consultorioOnlineUiApp.symptom.name">Name</span></th>
-                    <th><span translate="consultorioOnlineUiApp.symptom.description">Description</span></th>
+                    <th><span translate="consultorioOnlineAppApp.symptom.code">Code</span></th>
+                    <th><span translate="consultorioOnlineAppApp.symptom.name">Name</span></th>
+                    <th><span translate="consultorioOnlineAppApp.symptom.description">Description</span></th>
                     <th></th>
                 </tr>
             </thead>

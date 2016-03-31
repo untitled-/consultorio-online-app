@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
 	.controller('SymptomDeleteController', function($scope, $uibModalInstance, entity, Symptom) {
 
         $scope.symptom = entity;

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .config(function ($stateProvider) {
         $stateProvider
             .state('consultation', {
@@ -8,7 +8,7 @@ angular.module('consultorioOnlineUiApp')
                 url: '/consultations',
                 data: {
                     authorities: ['ROLE_USER'],
-                    pageTitle: 'consultorioOnlineUiApp.consultation.home.title'
+                    pageTitle: 'consultorioOnlineAppApp.consultation.home.title'
                 },
                 views: {
                     'content@': {
@@ -29,7 +29,7 @@ angular.module('consultorioOnlineUiApp')
                 url: '/consultation/{id}',
                 data: {
                     authorities: ['ROLE_USER'],
-                    pageTitle: 'consultorioOnlineUiApp.consultation.detail.title'
+                    pageTitle: 'consultorioOnlineAppApp.consultation.detail.title'
                 },
                 views: {
                     'content@': {

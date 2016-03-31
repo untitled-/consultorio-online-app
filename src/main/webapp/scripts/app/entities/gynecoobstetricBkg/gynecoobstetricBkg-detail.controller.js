@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('GynecoobstetricBkgDetailController', function ($scope, $rootScope, $stateParams, entity, GynecoobstetricBkg, Contraceptives, Patient) {
         $scope.gynecoobstetricBkg = entity;
         $scope.load = function (id) {
@@ -8,7 +8,7 @@ angular.module('consultorioOnlineUiApp')
                 $scope.gynecoobstetricBkg = result;
             });
         };
-        var unsubscribe = $rootScope.$on('consultorioOnlineUiApp:gynecoobstetricBkgUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('consultorioOnlineAppApp:gynecoobstetricBkgUpdate', function(event, result) {
             $scope.gynecoobstetricBkg = result;
         });
         $scope.$on('$destroy', unsubscribe);

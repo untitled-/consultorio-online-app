@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .config(function (uibPagerConfig) {
         uibPagerConfig.itemsPerPage = 20;
         uibPagerConfig.previousText = '«';

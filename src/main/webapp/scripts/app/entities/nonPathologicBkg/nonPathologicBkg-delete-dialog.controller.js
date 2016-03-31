@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
 	.controller('NonPathologicBkgDeleteController', function($scope, $uibModalInstance, entity, NonPathologicBkg) {
 
         $scope.nonPathologicBkg = entity;

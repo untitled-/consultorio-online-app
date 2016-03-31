@@ -1,6 +1,6 @@
 
 <div>
-    <h2><span translate="consultorioOnlineUiApp.contact.detail.title">Contact</span> {{contact.id}}</h2>
+    <h2><span translate="consultorioOnlineAppApp.contact.detail.title">Contact</span> {{contact.id}}</h2>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -12,15 +12,15 @@
             <tbody>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.contact.contactType">ContactType</span>
+                    <span translate="consultorioOnlineAppApp.contact.contactType">ContactType</span>
                 </td>
                 <td>
-                    <span class="form-control-static" translate="{{'consultorioOnlineUiApp.ContactType.' + contact.contactType}}">{{contact.contactType}}</span>
+                    <span class="form-control-static" translate="{{'consultorioOnlineAppApp.ContactType.' + contact.contactType}}">{{contact.contactType}}</span>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.contact.value">Value</span>
+                    <span translate="consultorioOnlineAppApp.contact.value">Value</span>
                 </td>
                 <td>
                     <span class="form-control-static">{{contact.value}}</span>
@@ -28,7 +28,7 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.contact.patients">patients</span>
+                    <span translate="consultorioOnlineAppApp.contact.patients">patients</span>
                 </td>
                 <td>
                     <a class="form-control-static" ui-sref="patient.detail({id:contact.patients.id})">{{contact.patients.id}}</a>

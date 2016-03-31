@@ -5,25 +5,24 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
     <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
-	<include file="classpath:config/liquibase/changelog/20160316050858_added_entity_Disease.xml" relativeToChangelogFile="false"/>
-	<include file="classpath:config/liquibase/changelog/20160316050857_added_entity_HeredoFamilyBkg.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160312060714_added_entity_Address.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160312060713_added_entity_Patient.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160312060715_added_entity_Contact.xml" relativeToChangelogFile="false"/>
-    
-    <include file="classpath:config/liquibase/changelog/20160319033821_added_entity_NonPathologicBkg.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160319033822_added_entity_Immunization.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160319033823_added_entity_PathologicBkg.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160319033824_added_entity_Alergy.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160319033825_added_entity_Addiction.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160319033826_added_entity_QuirurgicalProcedure.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160319033827_added_entity_Trauma.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160319033829_added_entity_Contraceptives.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160319033832_added_entity_Symptom.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160319033834_added_entity_Drug.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160319033833_added_entity_Treatment.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160319033828_added_entity_GynecoobstetricBkg.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160319033830_added_entity_Consultation.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20160319034140_added_entity_LabTest.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053102_added_entity_Address.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053105_added_entity_Disease.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053106_added_entity_NonPathologicBkg.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053107_added_entity_Immunization.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053108_added_entity_PathologicBkg.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053109_added_entity_Alergy.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053110_added_entity_Addiction.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053111_added_entity_QuirurgicalProcedure.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053112_added_entity_Trauma.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053114_added_entity_Contraceptives.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053116_added_entity_LabTest.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053117_added_entity_Symptom.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053119_added_entity_Drug.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053104_added_entity_HeredoFamilyBkg.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053118_added_entity_Treatment.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053101_added_entity_Patient.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053103_added_entity_Contact.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053113_added_entity_GynecoobstetricBkg.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160331053115_added_entity_Consultation.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
 </databaseChangeLog>

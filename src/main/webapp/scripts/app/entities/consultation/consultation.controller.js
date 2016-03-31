@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('ConsultationController', function ($scope, $state, Consultation, ConsultationSearch) {
 
         $scope.consultations = [];

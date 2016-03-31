@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('TreatmentDetailController', function ($scope, $rootScope, $stateParams, entity, Treatment, Drug, Consultation) {
         $scope.treatment = entity;
         $scope.load = function (id) {
@@ -8,7 +8,7 @@ angular.module('consultorioOnlineUiApp')
                 $scope.treatment = result;
             });
         };
-        var unsubscribe = $rootScope.$on('consultorioOnlineUiApp:treatmentUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('consultorioOnlineAppApp:treatmentUpdate', function(event, result) {
             $scope.treatment = result;
         });
         $scope.$on('$destroy', unsubscribe);

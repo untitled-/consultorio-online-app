@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .config(function ($stateProvider) {
         $stateProvider
             .state('heredoFamilyBkg', {
@@ -8,7 +8,7 @@ angular.module('consultorioOnlineUiApp')
                 url: '/heredoFamilyBkgs',
                 data: {
                     authorities: ['ROLE_USER'],
-                    pageTitle: 'consultorioOnlineUiApp.heredoFamilyBkg.home.title'
+                    pageTitle: 'consultorioOnlineAppApp.heredoFamilyBkg.home.title'
                 },
                 views: {
                     'content@': {
@@ -29,7 +29,7 @@ angular.module('consultorioOnlineUiApp')
                 url: '/heredoFamilyBkg/{id}',
                 data: {
                     authorities: ['ROLE_USER'],
-                    pageTitle: 'consultorioOnlineUiApp.heredoFamilyBkg.detail.title'
+                    pageTitle: 'consultorioOnlineAppApp.heredoFamilyBkg.detail.title'
                 },
                 views: {
                     'content@': {

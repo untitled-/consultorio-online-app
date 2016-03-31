@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
 	.controller('AddressDeleteController', function($scope, $uibModalInstance, entity, Address) {
 
         $scope.address = entity;

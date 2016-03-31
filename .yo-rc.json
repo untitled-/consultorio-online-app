@@ -1,6 +1,6 @@
 {
   "generator-jhipster": {
-    "baseName": "consultorio_online_ui",
+    "baseName": "consultorio_online_app",
     "packageName": "com.untitled.consultorio",
     "packageFolder": "com/untitled/consultorio",
     "authenticationType": "session",
@@ -8,15 +8,15 @@
     "clusteredHttpSession": "no",
     "websocket": "spring-websocket",
     "databaseType": "sql",
-    "devDatabaseType": "h2Disk",
-    "prodDatabaseType": "mysql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
     "searchEngine": "elasticsearch",
     "useSass": true,
     "buildTool": "maven",
     "frontendBuilder": "grunt",
     "enableTranslation": true,
     "enableSocialSignIn": true,
-    "rememberMeKey": "1352621ceb0245c583294012345905fbc4507854",
+    "rememberMeKey": "5d265833b125c16344e3dd736ad890d845fff9fe",
     "testFrameworks": [
       "gatling",
       "cucumber",

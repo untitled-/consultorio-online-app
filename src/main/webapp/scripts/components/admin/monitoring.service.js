@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .factory('MonitoringService', function ($rootScope, $http) {
         return {
             getMetrics: function () {

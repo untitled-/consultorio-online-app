@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp').controller('AlergyDialogController',
+angular.module('consultorioOnlineAppApp').controller('AlergyDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Alergy', 'PathologicBkg',
         function($scope, $stateParams, $uibModalInstance, entity, Alergy, PathologicBkg) {
 
@@ -13,7 +13,7 @@ angular.module('consultorioOnlineUiApp').controller('AlergyDialogController',
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('consultorioOnlineUiApp:alergyUpdate', result);
+            $scope.$emit('consultorioOnlineAppApp:alergyUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };

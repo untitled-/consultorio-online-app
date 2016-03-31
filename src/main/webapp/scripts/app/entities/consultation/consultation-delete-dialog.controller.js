@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
 	.controller('ConsultationDeleteController', function($scope, $uibModalInstance, entity, Consultation) {
 
         $scope.consultation = entity;

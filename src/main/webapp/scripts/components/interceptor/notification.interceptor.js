@@ -1,12 +1,12 @@
  'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .factory('notificationInterceptor', function ($q, AlertService) {
         return {
             response: function(response) {
-                var alertKey = response.headers('X-consultorioOnlineUiApp-alert');
+                var alertKey = response.headers('X-consultorioOnlineAppApp-alert');
                 if (angular.isString(alertKey)) {
-                    AlertService.success(alertKey, { param : response.headers('X-consultorioOnlineUiApp-params')});
+                    AlertService.success(alertKey, { param : response.headers('X-consultorioOnlineAppApp-params')});
                 }
                 return response;
             }

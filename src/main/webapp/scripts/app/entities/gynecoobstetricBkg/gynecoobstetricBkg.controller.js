@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('GynecoobstetricBkgController', function ($scope, $state, GynecoobstetricBkg, GynecoobstetricBkgSearch) {
 
         $scope.gynecoobstetricBkgs = [];

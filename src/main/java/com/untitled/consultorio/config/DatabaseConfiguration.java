@@ -69,12 +69,6 @@ public class DatabaseConfiguration {
             config.addDataSourceProperty("password", ""); // HikariCP doesn't allow null password
         }
 
-        //MySQL optimizations, see https://github.com/brettwooldridge/HikariCP/wiki/MySQL-Configuration
-        if ("com.mysql.jdbc.jdbc2.optional.MysqlDataSource".equals(dataSourceProperties.getDriverClassName())) {
-            config.addDataSourceProperty("cachePrepStmts", jHipsterProperties.getDatasource().isCachePrepStmts());
-            config.addDataSourceProperty("prepStmtCacheSize", jHipsterProperties.getDatasource().getPrepStmtCacheSize());
-            config.addDataSourceProperty("prepStmtCacheSqlLimit", jHipsterProperties.getDatasource().getPrepStmtCacheSqlLimit());
-        }
         if (metricRegistry != null) {
             config.setMetricRegistry(metricRegistry);
         }

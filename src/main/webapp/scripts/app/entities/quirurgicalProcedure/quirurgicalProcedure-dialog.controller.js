@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp').controller('QuirurgicalProcedureDialogController',
+angular.module('consultorioOnlineAppApp').controller('QuirurgicalProcedureDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'QuirurgicalProcedure', 'PathologicBkg',
         function($scope, $stateParams, $uibModalInstance, entity, QuirurgicalProcedure, PathologicBkg) {
 
@@ -13,7 +13,7 @@ angular.module('consultorioOnlineUiApp').controller('QuirurgicalProcedureDialogC
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('consultorioOnlineUiApp:quirurgicalProcedureUpdate', result);
+            $scope.$emit('consultorioOnlineAppApp:quirurgicalProcedureUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };

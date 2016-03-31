@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp').controller('HeredoFamilyBkgDialogController',
+angular.module('consultorioOnlineAppApp').controller('HeredoFamilyBkgDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'HeredoFamilyBkg', 'Disease', 'Patient',
         function($scope, $stateParams, $uibModalInstance, entity, HeredoFamilyBkg, Disease, Patient) {
 
@@ -14,7 +14,7 @@ angular.module('consultorioOnlineUiApp').controller('HeredoFamilyBkgDialogContro
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('consultorioOnlineUiApp:heredoFamilyBkgUpdate', result);
+            $scope.$emit('consultorioOnlineAppApp:heredoFamilyBkgUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };

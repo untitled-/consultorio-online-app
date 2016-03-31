@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('AlergyDetailController', function ($scope, $rootScope, $stateParams, entity, Alergy, PathologicBkg) {
         $scope.alergy = entity;
         $scope.load = function (id) {
@@ -8,7 +8,7 @@ angular.module('consultorioOnlineUiApp')
                 $scope.alergy = result;
             });
         };
-        var unsubscribe = $rootScope.$on('consultorioOnlineUiApp:alergyUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('consultorioOnlineAppApp:alergyUpdate', function(event, result) {
             $scope.alergy = result;
         });
         $scope.$on('$destroy', unsubscribe);

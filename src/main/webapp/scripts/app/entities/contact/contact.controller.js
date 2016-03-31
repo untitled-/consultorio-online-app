@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('ContactController', function ($scope, $state, Contact, ContactSearch) {
 
         $scope.contacts = [];

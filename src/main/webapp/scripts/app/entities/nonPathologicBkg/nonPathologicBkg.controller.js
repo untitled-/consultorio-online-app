@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('NonPathologicBkgController', function ($scope, $state, NonPathologicBkg, NonPathologicBkgSearch) {
 
         $scope.nonPathologicBkgs = [];

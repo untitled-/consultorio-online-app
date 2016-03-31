@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
 	.controller('TraumaDeleteController', function($scope, $uibModalInstance, entity, Trauma) {
 
         $scope.trauma = entity;

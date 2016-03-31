@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .service('DateUtils', function ($filter) {
 
     this.convertLocaleDateToServer = function(date) {

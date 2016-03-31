@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Consultorio Online</title>
+        <title>consultorio_online_app</title>
         <meta name="description" content="">
         <meta name="google" value="notranslate">
         <meta name="viewport" content="width=device-width">
@@ -11,15 +11,13 @@
         <!-- build:css assets/styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
-        <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css" />
-        <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css assets/styles/main.css -->
         <link rel="stylesheet" href="assets/styles/main.css">
         <!-- endbuild -->
     </head>
-    <body ng-app="consultorioOnlineUiApp">
+    <body ng-app="consultorioOnlineAppApp">
         <!--[if lt IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -68,8 +66,6 @@
         <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
         <script src="bower_components/sockjs-client/dist/sockjs.js"></script>
         <script src="bower_components/stomp-websocket/lib/stomp.min.js"></script>
-        <script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
-        <script src="bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -169,21 +165,6 @@
     <script src="scripts/app/entities/address/address-detail.controller.js"></script>
     <script src="scripts/components/entities/address/address.service.js"></script>
     <script src="scripts/components/entities/address/address.search.service.js"></script>
-    <script src="scripts/app/entities/contact/contact.js"></script>
-    <script src="scripts/app/entities/contact/contact.controller.js"></script>
-    <script src="scripts/app/entities/contact/contact-dialog.controller.js"></script>
-    <script src="scripts/app/entities/contact/contact-delete-dialog.controller.js"></script>
-    <script src="scripts/app/entities/contact/contact-detail.controller.js"></script>
-    <script src="scripts/components/entities/contact/contact.service.js"></script>
-    <script src="scripts/components/entities/contact/contact.search.service.js"></script>
-    <script src="scripts/app/entities/patient/patient.js"></script>
-    <script src="scripts/app/entities/patient/patient.controller.js"></script>
-    <script src="scripts/app/entities/patient/patient-dialog.controller.js"></script>
-    <script src="scripts/app/entities/patient/patient-delete-dialog.controller.js"></script>
-    <script src="scripts/app/entities/patient/patient-detail.controller.js"></script>
-    <script src="scripts/components/entities/patient/patient.service.js"></script>
-    <script src="scripts/components/entities/patient/patient.search.service.js"></script>
-    <script src="bower_components/messageformat/locale/es.js"></script>
     <script src="scripts/app/entities/disease/disease.js"></script>
     <script src="scripts/app/entities/disease/disease.controller.js"></script>
     <script src="scripts/app/entities/disease/disease-dialog.controller.js"></script>
@@ -191,13 +172,6 @@
     <script src="scripts/app/entities/disease/disease-detail.controller.js"></script>
     <script src="scripts/components/entities/disease/disease.service.js"></script>
     <script src="scripts/components/entities/disease/disease.search.service.js"></script>
-    <script src="scripts/app/entities/heredoFamilyBkg/heredoFamilyBkg.js"></script>
-    <script src="scripts/app/entities/heredoFamilyBkg/heredoFamilyBkg.controller.js"></script>
-    <script src="scripts/app/entities/heredoFamilyBkg/heredoFamilyBkg-dialog.controller.js"></script>
-    <script src="scripts/app/entities/heredoFamilyBkg/heredoFamilyBkg-delete-dialog.controller.js"></script>
-    <script src="scripts/app/entities/heredoFamilyBkg/heredoFamilyBkg-detail.controller.js"></script>
-    <script src="scripts/components/entities/heredoFamilyBkg/heredoFamilyBkg.service.js"></script>
-    <script src="scripts/components/entities/heredoFamilyBkg/heredoFamilyBkg.search.service.js"></script>
     <script src="scripts/app/entities/nonPathologicBkg/nonPathologicBkg.js"></script>
     <script src="scripts/app/entities/nonPathologicBkg/nonPathologicBkg.controller.js"></script>
     <script src="scripts/app/entities/nonPathologicBkg/nonPathologicBkg-dialog.controller.js"></script>
@@ -254,6 +228,13 @@
     <script src="scripts/app/entities/contraceptives/contraceptives-detail.controller.js"></script>
     <script src="scripts/components/entities/contraceptives/contraceptives.service.js"></script>
     <script src="scripts/components/entities/contraceptives/contraceptives.search.service.js"></script>
+    <script src="scripts/app/entities/labTest/labTest.js"></script>
+    <script src="scripts/app/entities/labTest/labTest.controller.js"></script>
+    <script src="scripts/app/entities/labTest/labTest-dialog.controller.js"></script>
+    <script src="scripts/app/entities/labTest/labTest-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/labTest/labTest-detail.controller.js"></script>
+    <script src="scripts/components/entities/labTest/labTest.service.js"></script>
+    <script src="scripts/components/entities/labTest/labTest.search.service.js"></script>
     <script src="scripts/app/entities/symptom/symptom.js"></script>
     <script src="scripts/app/entities/symptom/symptom.controller.js"></script>
     <script src="scripts/app/entities/symptom/symptom-dialog.controller.js"></script>
@@ -268,6 +249,13 @@
     <script src="scripts/app/entities/drug/drug-detail.controller.js"></script>
     <script src="scripts/components/entities/drug/drug.service.js"></script>
     <script src="scripts/components/entities/drug/drug.search.service.js"></script>
+    <script src="scripts/app/entities/heredoFamilyBkg/heredoFamilyBkg.js"></script>
+    <script src="scripts/app/entities/heredoFamilyBkg/heredoFamilyBkg.controller.js"></script>
+    <script src="scripts/app/entities/heredoFamilyBkg/heredoFamilyBkg-dialog.controller.js"></script>
+    <script src="scripts/app/entities/heredoFamilyBkg/heredoFamilyBkg-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/heredoFamilyBkg/heredoFamilyBkg-detail.controller.js"></script>
+    <script src="scripts/components/entities/heredoFamilyBkg/heredoFamilyBkg.service.js"></script>
+    <script src="scripts/components/entities/heredoFamilyBkg/heredoFamilyBkg.search.service.js"></script>
     <script src="scripts/app/entities/treatment/treatment.js"></script>
     <script src="scripts/app/entities/treatment/treatment.controller.js"></script>
     <script src="scripts/app/entities/treatment/treatment-dialog.controller.js"></script>
@@ -275,6 +263,20 @@
     <script src="scripts/app/entities/treatment/treatment-detail.controller.js"></script>
     <script src="scripts/components/entities/treatment/treatment.service.js"></script>
     <script src="scripts/components/entities/treatment/treatment.search.service.js"></script>
+    <script src="scripts/app/entities/patient/patient.js"></script>
+    <script src="scripts/app/entities/patient/patient.controller.js"></script>
+    <script src="scripts/app/entities/patient/patient-dialog.controller.js"></script>
+    <script src="scripts/app/entities/patient/patient-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/patient/patient-detail.controller.js"></script>
+    <script src="scripts/components/entities/patient/patient.service.js"></script>
+    <script src="scripts/components/entities/patient/patient.search.service.js"></script>
+    <script src="scripts/app/entities/contact/contact.js"></script>
+    <script src="scripts/app/entities/contact/contact.controller.js"></script>
+    <script src="scripts/app/entities/contact/contact-dialog.controller.js"></script>
+    <script src="scripts/app/entities/contact/contact-delete-dialog.controller.js"></script>
+    <script src="scripts/app/entities/contact/contact-detail.controller.js"></script>
+    <script src="scripts/components/entities/contact/contact.service.js"></script>
+    <script src="scripts/components/entities/contact/contact.search.service.js"></script>
     <script src="scripts/app/entities/gynecoobstetricBkg/gynecoobstetricBkg.js"></script>
     <script src="scripts/app/entities/gynecoobstetricBkg/gynecoobstetricBkg.controller.js"></script>
     <script src="scripts/app/entities/gynecoobstetricBkg/gynecoobstetricBkg-dialog.controller.js"></script>
@@ -289,16 +291,6 @@
     <script src="scripts/app/entities/consultation/consultation-detail.controller.js"></script>
     <script src="scripts/components/entities/consultation/consultation.service.js"></script>
     <script src="scripts/components/entities/consultation/consultation.search.service.js"></script>
-    <script src="scripts/app/entities/labTest/labTest.js"></script>
-    <script src="scripts/app/entities/labTest/labTest.controller.js"></script>
-    <script src="scripts/app/entities/labTest/labTest-dialog.controller.js"></script>
-    <script src="scripts/app/entities/labTest/labTest-delete-dialog.controller.js"></script>
-    <script src="scripts/app/entities/labTest/labTest-detail.controller.js"></script>
-    <script src="scripts/components/entities/labTest/labTest.service.js"></script>
-    <script src="scripts/components/entities/labTest/labTest.search.service.js"></script>
     <!-- endbuild -->
-	<script>
-	  //$.material.init()
-	</script>
 </body>
 </html>

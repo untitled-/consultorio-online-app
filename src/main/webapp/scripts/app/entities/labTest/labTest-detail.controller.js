@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('LabTestDetailController', function ($scope, $rootScope, $stateParams, entity, LabTest, Consultation) {
         $scope.labTest = entity;
         $scope.load = function (id) {
@@ -8,7 +8,7 @@ angular.module('consultorioOnlineUiApp')
                 $scope.labTest = result;
             });
         };
-        var unsubscribe = $rootScope.$on('consultorioOnlineUiApp:labTestUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('consultorioOnlineAppApp:labTestUpdate', function(event, result) {
             $scope.labTest = result;
         });
         $scope.$on('$destroy', unsubscribe);

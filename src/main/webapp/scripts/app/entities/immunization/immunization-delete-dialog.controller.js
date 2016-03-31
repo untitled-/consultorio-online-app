@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
 	.controller('ImmunizationDeleteController', function($scope, $uibModalInstance, entity, Immunization) {
 
         $scope.immunization = entity;

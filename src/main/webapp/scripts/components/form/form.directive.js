@@ -1,7 +1,7 @@
 /* globals $ */
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .directive('showValidation', function() {
         return {
             restrict: 'A',

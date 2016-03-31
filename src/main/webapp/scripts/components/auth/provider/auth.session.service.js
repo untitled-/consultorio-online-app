@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .factory('AuthServerProvider', function loginService($http, localStorageService, $window, Tracker) {
         return {
             login: function(credentials) {

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
 	.controller('AlergyDeleteController', function($scope, $uibModalInstance, entity, Alergy) {
 
         $scope.alergy = entity;

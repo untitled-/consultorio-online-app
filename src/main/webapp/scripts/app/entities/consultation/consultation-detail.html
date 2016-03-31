@@ -1,6 +1,6 @@
 
 <div>
-    <h2><span translate="consultorioOnlineUiApp.consultation.detail.title">Consultation</span> {{consultation.id}}</h2>
+    <h2><span translate="consultorioOnlineAppApp.consultation.detail.title">Consultation</span> {{consultation.id}}</h2>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -12,7 +12,7 @@
             <tbody>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.consultation.consultationDate">ConsultationDate</span>
+                    <span translate="consultorioOnlineAppApp.consultation.consultationDate">ConsultationDate</span>
                 </td>
                 <td>
                     <span class="form-control-static">{{consultation.consultationDate | date:'mediumDate'}}</span>
@@ -20,7 +20,7 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.consultation.idx">Idx</span>
+                    <span translate="consultorioOnlineAppApp.consultation.idx">Idx</span>
                 </td>
                 <td>
                     <span class="form-control-static">{{consultation.idx}}</span>
@@ -28,7 +28,7 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.consultation.diferentialDiagnostic">DiferentialDiagnostic</span>
+                    <span translate="consultorioOnlineAppApp.consultation.diferentialDiagnostic">DiferentialDiagnostic</span>
                 </td>
                 <td>
                     <span class="form-control-static">{{consultation.diferentialDiagnostic}}</span>
@@ -36,7 +36,7 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.consultation.tests">tests</span>
+                    <span translate="consultorioOnlineAppApp.consultation.tests">tests</span>
                 </td>
                 <td>
                     <span ng-repeat="tests in consultation.testss">
@@ -46,7 +46,7 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.consultation.treatments">treatments</span>
+                    <span translate="consultorioOnlineAppApp.consultation.treatments">treatments</span>
                 </td>
                 <td>
                     <a class="form-control-static" ui-sref="treatment.detail({id:consultation.treatments.id})">{{consultation.treatments.id}}</a>
@@ -54,7 +54,7 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.consultation.symptoms">symptoms</span>
+                    <span translate="consultorioOnlineAppApp.consultation.symptoms">symptoms</span>
                 </td>
                 <td>
                     <span ng-repeat="symptoms in consultation.symptomss">
@@ -64,7 +64,7 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.consultation.patients">patients</span>
+                    <span translate="consultorioOnlineAppApp.consultation.patients">patients</span>
                 </td>
                 <td>
                     <a class="form-control-static" ui-sref="patient.detail({id:consultation.patients.id})">{{consultation.patients.id}}</a>

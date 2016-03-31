@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp').controller('TraumaDialogController',
+angular.module('consultorioOnlineAppApp').controller('TraumaDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Trauma', 'PathologicBkg',
         function($scope, $stateParams, $uibModalInstance, entity, Trauma, PathologicBkg) {
 
@@ -13,7 +13,7 @@ angular.module('consultorioOnlineUiApp').controller('TraumaDialogController',
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('consultorioOnlineUiApp:traumaUpdate', result);
+            $scope.$emit('consultorioOnlineAppApp:traumaUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };

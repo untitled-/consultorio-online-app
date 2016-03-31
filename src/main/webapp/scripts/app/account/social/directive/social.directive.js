@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .directive('jhSocial', function($translatePartialLoader, $translate, $filter, SocialService) {
         return {
             restrict: 'E',

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('AlergyController', function ($scope, $state, Alergy, AlergySearch) {
 
         $scope.alergys = [];

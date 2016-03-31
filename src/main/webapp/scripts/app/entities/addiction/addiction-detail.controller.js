@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('AddictionDetailController', function ($scope, $rootScope, $stateParams, entity, Addiction, PathologicBkg) {
         $scope.addiction = entity;
         $scope.load = function (id) {
@@ -8,7 +8,7 @@ angular.module('consultorioOnlineUiApp')
                 $scope.addiction = result;
             });
         };
-        var unsubscribe = $rootScope.$on('consultorioOnlineUiApp:addictionUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('consultorioOnlineAppApp:addictionUpdate', function(event, result) {
             $scope.addiction = result;
         });
         $scope.$on('$destroy', unsubscribe);

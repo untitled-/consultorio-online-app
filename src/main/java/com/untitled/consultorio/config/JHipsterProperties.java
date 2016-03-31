@@ -208,7 +208,7 @@ public class JHipsterProperties {
 
     public static class Mail {
 
-        private String from = "consultorio_online_ui@localhost";
+        private String from = "consultorio_online_app@localhost";
 
         public String getFrom() {
             return from;
@@ -244,9 +244,9 @@ public class JHipsterProperties {
 
     public static class Swagger {
 
-        private String title = "consultorio_online_ui API";
+        private String title = "consultorio_online_app API";
 
-        private String description = "consultorio_online_ui API documentation";
+        private String description = "consultorio_online_app API documentation";
 
         private String version = "0.0.1";
 
@@ -389,7 +389,7 @@ public class JHipsterProperties {
 
             private int port = 2003;
 
-            private String prefix = "consultorio_online_ui";
+            private String prefix = "consultorio_online_app";
 
             public boolean isEnabled() {
                 return enabled;

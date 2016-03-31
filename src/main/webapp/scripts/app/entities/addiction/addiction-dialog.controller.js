@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp').controller('AddictionDialogController',
+angular.module('consultorioOnlineAppApp').controller('AddictionDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Addiction', 'PathologicBkg',
         function($scope, $stateParams, $uibModalInstance, entity, Addiction, PathologicBkg) {
 
@@ -13,7 +13,7 @@ angular.module('consultorioOnlineUiApp').controller('AddictionDialogController',
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('consultorioOnlineUiApp:addictionUpdate', result);
+            $scope.$emit('consultorioOnlineAppApp:addictionUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };

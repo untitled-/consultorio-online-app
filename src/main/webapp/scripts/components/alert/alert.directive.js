@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .directive('jhAlert', function(AlertService) {
         return {
             restrict: 'E',
@@ -32,7 +32,7 @@ angular.module('consultorioOnlineUiApp')
 
                     $scope.alerts = [];
 
-                    var cleanHttpErrorListener = $rootScope.$on('consultorioOnlineUiApp.httpError', function (event, httpResponse) {
+                    var cleanHttpErrorListener = $rootScope.$on('consultorioOnlineAppApp.httpError', function (event, httpResponse) {
                         var i;
                         event.stopPropagation();
                         switch (httpResponse.status) {
@@ -42,8 +42,8 @@ angular.module('consultorioOnlineUiApp')
                                 break;
 
                             case 400:
-                                var errorHeader = httpResponse.headers('X-consultorioOnlineUiApp-error');
-                                var entityKey = httpResponse.headers('X-consultorioOnlineUiApp-params');
+                                var errorHeader = httpResponse.headers('X-consultorioOnlineAppApp-error');
+                                var entityKey = httpResponse.headers('X-consultorioOnlineAppApp-params');
                                 if (errorHeader) {
                                     var entityName = $translate.instant('global.menu.entities.' + entityKey);
                                     addErrorAlert(errorHeader, errorHeader, {entityName: entityName});
@@ -52,7 +52,7 @@ angular.module('consultorioOnlineUiApp')
                                         var fieldError = httpResponse.data.fieldErrors[i];
                                         // convert 'something[14].other[4].id' to 'something[].other[].id' so translations can be written to it
                                         var convertedField = fieldError.field.replace(/\[\d*\]/g, "[]");
-                                        var fieldName = $translate.instant('consultorioOnlineUiApp.' + fieldError.objectName + '.' + convertedField);
+                                        var fieldName = $translate.instant('consultorioOnlineAppApp.' + fieldError.objectName + '.' + convertedField);
                                         addErrorAlert('Field ' + fieldName + ' cannot be empty', 'error.' + fieldError.message, {fieldName: fieldName});
                                     }
                                 } else if (httpResponse.data && httpResponse.data.message) {

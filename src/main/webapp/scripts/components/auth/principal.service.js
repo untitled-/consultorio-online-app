@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .factory('Principal', function Principal($q, Account, Tracker) {
         var _identity,
             _authenticated = false;

@@ -1,4 +1,4 @@
-# consultorio_online_ui
+# consultorio_online_app
 
 This application was generated using JHipster, you can find documentation and help at [https://jhipster.github.io](https://jhipster.github.io).
 
@@ -28,7 +28,7 @@ Add the `-h` flag on any command to see how you can use it. For example, `bower 
 
 # Building for production
 
-To optimize the consultorio_online_ui client for production, run:
+To optimize the consultorio_online_app client for production, run:
 
     mvn -Pprod clean package
 
@@ -54,9 +54,9 @@ and can be run by starting Spring Boot in one terminal (`mvn spring-boot:run`) a
 
 To setup this project in Jenkins, use the following configuration:
 
-* Project name: `consultorio_online_ui`
+* Project name: `consultorio_online_app`
 * Source Code Management
-    * Git Repository: `git@github.com:xxxx/consultorio_online_ui.git`
+    * Git Repository: `git@github.com:xxxx/consultorio_online_app.git`
     * Branches to build: `*/master`
     * Additional Behaviours: `Wipe out repository & force clone`
 * Build Triggers

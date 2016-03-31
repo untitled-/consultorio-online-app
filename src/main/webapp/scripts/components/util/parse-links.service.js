@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .service('ParseLinks', function () {
         this.parse = function (header) {
             if (header.length == 0) {

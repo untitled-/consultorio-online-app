@@ -34,7 +34,7 @@ public class Application {
     private Environment env;
 
     /**
-     * Initializes consultorio_online_ui.
+     * Initializes consultorio_online_app.
      * <p/>
      * Spring profiles can be configured with a program arguments --spring.profiles.active=your-active-profile
      * <p/>

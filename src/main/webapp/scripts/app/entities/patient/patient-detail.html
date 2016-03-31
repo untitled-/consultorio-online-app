@@ -1,6 +1,6 @@
 
 <div>
-    <h2><span translate="consultorioOnlineUiApp.patient.detail.title">Patient</span> {{patient.id}}</h2>
+    <h2><span translate="consultorioOnlineAppApp.patient.detail.title">Patient</span> {{patient.id}}</h2>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -12,7 +12,7 @@
             <tbody>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.patient.firstName">FirstName</span>
+                    <span translate="consultorioOnlineAppApp.patient.firstName">FirstName</span>
                 </td>
                 <td>
                     <span class="form-control-static">{{patient.firstName}}</span>
@@ -20,7 +20,7 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.patient.middleName">MiddleName</span>
+                    <span translate="consultorioOnlineAppApp.patient.middleName">MiddleName</span>
                 </td>
                 <td>
                     <span class="form-control-static">{{patient.middleName}}</span>
@@ -28,7 +28,7 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.patient.lastName">LastName</span>
+                    <span translate="consultorioOnlineAppApp.patient.lastName">LastName</span>
                 </td>
                 <td>
                     <span class="form-control-static">{{patient.lastName}}</span>
@@ -36,7 +36,7 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.patient.dateOfBirth">DateOfBirth</span>
+                    <span translate="consultorioOnlineAppApp.patient.dateOfBirth">DateOfBirth</span>
                 </td>
                 <td>
                     <span class="form-control-static">{{patient.dateOfBirth | date:'mediumDate'}}</span>
@@ -44,7 +44,7 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.patient.job">Job</span>
+                    <span translate="consultorioOnlineAppApp.patient.job">Job</span>
                 </td>
                 <td>
                     <span class="form-control-static">{{patient.job}}</span>
@@ -52,31 +52,31 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.patient.bloodType">BloodType</span>
+                    <span translate="consultorioOnlineAppApp.patient.bloodType">BloodType</span>
                 </td>
                 <td>
-                    <span class="form-control-static" translate="{{'consultorioOnlineUiApp.BloodType.' + patient.bloodType}}">{{patient.bloodType}}</span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <span translate="consultorioOnlineUiApp.patient.maritalStatus">MaritalStatus</span>
-                </td>
-                <td>
-                    <span class="form-control-static" translate="{{'consultorioOnlineUiApp.MaritalStatus.' + patient.maritalStatus}}">{{patient.maritalStatus}}</span>
+                    <span class="form-control-static" translate="{{'consultorioOnlineAppApp.BloodType.' + patient.bloodType}}">{{patient.bloodType}}</span>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.patient.gender">Gender</span>
+                    <span translate="consultorioOnlineAppApp.patient.maritalStatus">MaritalStatus</span>
                 </td>
                 <td>
-                    <span class="form-control-static" translate="{{'consultorioOnlineUiApp.Gender.' + patient.gender}}">{{patient.gender}}</span>
+                    <span class="form-control-static" translate="{{'consultorioOnlineAppApp.MaritalStatus.' + patient.maritalStatus}}">{{patient.maritalStatus}}</span>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.patient.addresss">addresss</span>
+                    <span translate="consultorioOnlineAppApp.patient.gender">Gender</span>
+                </td>
+                <td>
+                    <span class="form-control-static" translate="{{'consultorioOnlineAppApp.Gender.' + patient.gender}}">{{patient.gender}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="consultorioOnlineAppApp.patient.addresss">addresss</span>
                 </td>
                 <td>
                     <a class="form-control-static" ui-sref="address.detail({id:patient.addresss.id})">{{patient.addresss.id}}</a>
@@ -84,7 +84,7 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.patient.heredoFamilyBkgs">heredoFamilyBkgs</span>
+                    <span translate="consultorioOnlineAppApp.patient.heredoFamilyBkgs">heredoFamilyBkgs</span>
                 </td>
                 <td>
                     <a class="form-control-static" ui-sref="heredoFamilyBkg.detail({id:patient.heredoFamilyBkgs.id})">{{patient.heredoFamilyBkgs.id}}</a>
@@ -92,7 +92,7 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.patient.nonPathologicBkgs">nonPathologicBkgs</span>
+                    <span translate="consultorioOnlineAppApp.patient.nonPathologicBkgs">nonPathologicBkgs</span>
                 </td>
                 <td>
                     <a class="form-control-static" ui-sref="nonPathologicBkg.detail({id:patient.nonPathologicBkgs.id})">{{patient.nonPathologicBkgs.id}}</a>
@@ -100,7 +100,7 @@
             </tr>
             <tr>
                 <td>
-                    <span translate="consultorioOnlineUiApp.patient.pathologicBkgs">pathologicBkgs</span>
+                    <span translate="consultorioOnlineAppApp.patient.pathologicBkgs">pathologicBkgs</span>
                 </td>
                 <td>
                     <a class="form-control-static" ui-sref="pathologicBkg.detail({id:patient.pathologicBkgs.id})">{{patient.pathologicBkgs.id}}</a>

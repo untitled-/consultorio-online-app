@@ -1,5 +1,5 @@
 <div>
-    <h2 translate="consultorioOnlineUiApp.contact.home.title">Contacts</h2>
+    <h2 translate="consultorioOnlineAppApp.contact.home.title">Contacts</h2>
     <jh-alert></jh-alert>
     <div class="container-fluid">
         <div class="row">
@@ -7,14 +7,14 @@
                 <button class="btn btn-primary" ui-sref="contact.new" >
                     <span class="glyphicon glyphicon-plus"></span>
                     <span 
-class="hidden-xs"                        translate="consultorioOnlineUiApp.contact.home.createLabel">Create new Contact
+class="hidden-xs"                        translate="consultorioOnlineAppApp.contact.home.createLabel">Create new Contact
                     </span>
                 </button>
             </div>
             <div class="col-xs-8 no-padding-right">
                 <form name="searchForm" class="form-inline">
                     <div class="input-group pull-right" >
-                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'consultorioOnlineUiApp.contact.home.search' | translate }}">
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'consultorioOnlineAppApp.contact.home.search' | translate }}">
                         <span  class="input-group-btn width-min" >
                             <button class="btn btn-info" ng-click="search()">
                                 <span class="glyphicon glyphicon-search"></span>
@@ -31,16 +31,16 @@ class="hidden-xs"                        translate="consultorioOnlineUiApp.conta
             <thead>
                 <tr>
                     <th><span translate="global.field.id">ID</span></th>
-                    <th><span translate="consultorioOnlineUiApp.contact.contactType">ContactType</span></th>
-                    <th><span translate="consultorioOnlineUiApp.contact.value">Value</span></th>
-                    <th><span translate="consultorioOnlineUiApp.contact.patients">patients</span></th>
+                    <th><span translate="consultorioOnlineAppApp.contact.contactType">ContactType</span></th>
+                    <th><span translate="consultorioOnlineAppApp.contact.value">Value</span></th>
+                    <th><span translate="consultorioOnlineAppApp.contact.patients">patients</span></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="contact in contacts track by contact.id">
                     <td><a ui-sref="contact.detail({id:contact.id})">{{contact.id}}</a></td>
-                    <td translate="{{'consultorioOnlineUiApp.ContactType.' + contact.contactType}}">{{contact.contactType}}</td>
+                    <td translate="{{'consultorioOnlineAppApp.ContactType.' + contact.contactType}}">{{contact.contactType}}</td>
                     <td>{{contact.value}}</td>
                     <td>
                         <a ui-sref="patient.detail({id:contact.patients.id})">{{contact.patients.id}}</a>

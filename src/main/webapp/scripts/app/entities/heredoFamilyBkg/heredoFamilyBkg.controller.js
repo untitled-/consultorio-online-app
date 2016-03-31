@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('HeredoFamilyBkgController', function ($scope, $state, HeredoFamilyBkg, HeredoFamilyBkgSearch) {
 
         $scope.heredoFamilyBkgs = [];

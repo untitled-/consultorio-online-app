@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('ContraceptivesDetailController', function ($scope, $rootScope, $stateParams, entity, Contraceptives, GynecoobstetricBkg) {
         $scope.contraceptives = entity;
         $scope.load = function (id) {
@@ -8,7 +8,7 @@ angular.module('consultorioOnlineUiApp')
                 $scope.contraceptives = result;
             });
         };
-        var unsubscribe = $rootScope.$on('consultorioOnlineUiApp:contraceptivesUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('consultorioOnlineAppApp:contraceptivesUpdate', function(event, result) {
             $scope.contraceptives = result;
         });
         $scope.$on('$destroy', unsubscribe);

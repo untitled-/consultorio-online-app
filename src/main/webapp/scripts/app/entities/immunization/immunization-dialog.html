@@ -4,7 +4,7 @@
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 ng-click="clear()">&times;</button>
-        <h4 class="modal-title" id="myImmunizationLabel" translate="consultorioOnlineUiApp.immunization.home.createOrEditLabel">Create or edit a Immunization</h4>
+        <h4 class="modal-title" id="myImmunizationLabel" translate="consultorioOnlineAppApp.immunization.home.createOrEditLabel">Create or edit a Immunization</h4>
     </div>
     <div class="modal-body">
         <jh-alert-error></jh-alert-error>
@@ -14,26 +14,26 @@
                     ng-model="immunization.id" readonly />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.immunization.code" for="field_code">Code</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.immunization.code" for="field_code">Code</label>
             <input type="text" class="form-control" name="code" id="field_code"
                     ng-model="immunization.code"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.immunization.name" for="field_name">Name</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.immunization.name" for="field_name">Name</label>
             <input type="text" class="form-control" name="name" id="field_name"
                     ng-model="immunization.name"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.immunization.description" for="field_description">Description</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.immunization.description" for="field_description">Description</label>
             <input type="text" class="form-control" name="description" id="field_description"
                     ng-model="immunization.description"
                      />
         </div>
 
         <div class="form-group">
-            <label translate="consultorioOnlineUiApp.immunization.nonPathologicBkgs" for="field_nonPathologicBkgs">nonPathologicBkgs</label>
+            <label translate="consultorioOnlineAppApp.immunization.nonPathologicBkgs" for="field_nonPathologicBkgs">nonPathologicBkgs</label>
             <select class="form-control" id="field_nonPathologicBkgs" name="nonPathologicBkgs" ng-model="immunization.nonPathologicBkgs" ng-options="nonPathologicBkg as nonPathologicBkg.id for nonPathologicBkg in nonpathologicbkgs track by nonPathologicBkg.id">
                 <option value=""></option>
             </select>

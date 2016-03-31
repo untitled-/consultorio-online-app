@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .controller('PatientDetailController', function ($scope, $rootScope, $stateParams, entity, Patient, Address, Contact, HeredoFamilyBkg, NonPathologicBkg, PathologicBkg, GynecoobstetricBkg, Consultation) {
         $scope.patient = entity;
         $scope.load = function (id) {
@@ -8,7 +8,7 @@ angular.module('consultorioOnlineUiApp')
                 $scope.patient = result;
             });
         };
-        var unsubscribe = $rootScope.$on('consultorioOnlineUiApp:patientUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('consultorioOnlineAppApp:patientUpdate', function(event, result) {
             $scope.patient = result;
         });
         $scope.$on('$destroy', unsubscribe);

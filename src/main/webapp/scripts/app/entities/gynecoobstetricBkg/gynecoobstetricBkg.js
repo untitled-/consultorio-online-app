@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .config(function ($stateProvider) {
         $stateProvider
             .state('gynecoobstetricBkg', {
@@ -8,7 +8,7 @@ angular.module('consultorioOnlineUiApp')
                 url: '/gynecoobstetricBkgs',
                 data: {
                     authorities: ['ROLE_USER'],
-                    pageTitle: 'consultorioOnlineUiApp.gynecoobstetricBkg.home.title'
+                    pageTitle: 'consultorioOnlineAppApp.gynecoobstetricBkg.home.title'
                 },
                 views: {
                     'content@': {
@@ -29,7 +29,7 @@ angular.module('consultorioOnlineUiApp')
                 url: '/gynecoobstetricBkg/{id}',
                 data: {
                     authorities: ['ROLE_USER'],
-                    pageTitle: 'consultorioOnlineUiApp.gynecoobstetricBkg.detail.title'
+                    pageTitle: 'consultorioOnlineAppApp.gynecoobstetricBkg.detail.title'
                 },
                 views: {
                     'content@': {

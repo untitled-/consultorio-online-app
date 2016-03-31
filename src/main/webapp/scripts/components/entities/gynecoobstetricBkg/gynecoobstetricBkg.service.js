@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .factory('GynecoobstetricBkg', function ($resource, DateUtils) {
         return $resource('api/gynecoobstetricBkgs/:id', {}, {
             'query': { method: 'GET', isArray: true},

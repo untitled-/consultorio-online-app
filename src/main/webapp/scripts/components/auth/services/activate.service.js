@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .factory('Activate', function ($resource) {
         return $resource('api/activate', {}, {
             'get': { method: 'GET', params: {}, isArray: false}

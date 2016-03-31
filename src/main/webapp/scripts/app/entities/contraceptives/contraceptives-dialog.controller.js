@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp').controller('ContraceptivesDialogController',
+angular.module('consultorioOnlineAppApp').controller('ContraceptivesDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Contraceptives', 'GynecoobstetricBkg',
         function($scope, $stateParams, $uibModalInstance, entity, Contraceptives, GynecoobstetricBkg) {
 
@@ -13,7 +13,7 @@ angular.module('consultorioOnlineUiApp').controller('ContraceptivesDialogControl
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('consultorioOnlineUiApp:contraceptivesUpdate', result);
+            $scope.$emit('consultorioOnlineAppApp:contraceptivesUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };

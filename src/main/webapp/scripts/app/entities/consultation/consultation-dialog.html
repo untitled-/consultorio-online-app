@@ -4,7 +4,7 @@
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 ng-click="clear()">&times;</button>
-        <h4 class="modal-title" id="myConsultationLabel" translate="consultorioOnlineUiApp.consultation.home.createOrEditLabel">Create or edit a Consultation</h4>
+        <h4 class="modal-title" id="myConsultationLabel" translate="consultorioOnlineAppApp.consultation.home.createOrEditLabel">Create or edit a Consultation</h4>
     </div>
     <div class="modal-body">
         <jh-alert-error></jh-alert-error>
@@ -14,7 +14,7 @@
                     ng-model="consultation.id" readonly />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.consultation.consultationDate" for="field_consultationDate">ConsultationDate</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.consultation.consultationDate" for="field_consultationDate">ConsultationDate</label>
                 <div class="input-group">
                     <input id="field_consultationDate" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="consultation.consultationDate" is-open="datePickerForConsultationDate.status.opened"
                     />
@@ -24,34 +24,34 @@
                 </div>
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.consultation.idx" for="field_idx">Idx</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.consultation.idx" for="field_idx">Idx</label>
             <input type="text" class="form-control" name="idx" id="field_idx"
                     ng-model="consultation.idx"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.consultation.diferentialDiagnostic" for="field_diferentialDiagnostic">DiferentialDiagnostic</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.consultation.diferentialDiagnostic" for="field_diferentialDiagnostic">DiferentialDiagnostic</label>
             <input type="text" class="form-control" name="diferentialDiagnostic" id="field_diferentialDiagnostic"
                     ng-model="consultation.diferentialDiagnostic"
                      />
         </div>
 
         <div class="form-group">
-            <label translate="consultorioOnlineUiApp.consultation.tests" for="field_tests">tests</label>
+            <label translate="consultorioOnlineAppApp.consultation.tests" for="field_tests">tests</label>
             <select class="form-control" id="field_tests" multiple name="tests" ng-model="consultation.testss" ng-options="labTest as labTest.id for labTest in labtests track by labTest.id"></select>
         </div>
         <div class="form-group">
-            <label translate="consultorioOnlineUiApp.consultation.treatments" for="field_treatments">treatments</label>
+            <label translate="consultorioOnlineAppApp.consultation.treatments" for="field_treatments">treatments</label>
             <select class="form-control" id="field_treatments" name="treatments" ng-model="consultation.treatments" ng-options="treatment as treatment.id for treatment in treatmentss | orderBy:'id' track by treatment.id">
                 <option value=""></option>
             </select>
         </div>
         <div class="form-group">
-            <label translate="consultorioOnlineUiApp.consultation.symptoms" for="field_symptoms">symptoms</label>
+            <label translate="consultorioOnlineAppApp.consultation.symptoms" for="field_symptoms">symptoms</label>
             <select class="form-control" id="field_symptoms" multiple name="symptoms" ng-model="consultation.symptomss" ng-options="symptom as symptom.id for symptom in symptoms track by symptom.id"></select>
         </div>
         <div class="form-group">
-            <label translate="consultorioOnlineUiApp.consultation.patients" for="field_patients">patients</label>
+            <label translate="consultorioOnlineAppApp.consultation.patients" for="field_patients">patients</label>
             <select class="form-control" id="field_patients" name="patients" ng-model="consultation.patients" ng-options="patient as patient.id for patient in patients track by patient.id">
                 <option value=""></option>
             </select>

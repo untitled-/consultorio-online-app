@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
 	.controller('GynecoobstetricBkgDeleteController', function($scope, $uibModalInstance, entity, GynecoobstetricBkg) {
 
         $scope.gynecoobstetricBkg = entity;

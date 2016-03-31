@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp').controller('TreatmentDialogController',
+angular.module('consultorioOnlineAppApp').controller('TreatmentDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Treatment', 'Drug', 'Consultation',
         function($scope, $stateParams, $uibModalInstance, entity, Treatment, Drug, Consultation) {
 
@@ -14,7 +14,7 @@ angular.module('consultorioOnlineUiApp').controller('TreatmentDialogController',
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('consultorioOnlineUiApp:treatmentUpdate', result);
+            $scope.$emit('consultorioOnlineAppApp:treatmentUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };

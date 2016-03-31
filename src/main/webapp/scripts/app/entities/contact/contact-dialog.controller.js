@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp').controller('ContactDialogController',
+angular.module('consultorioOnlineAppApp').controller('ContactDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Contact', 'Patient',
         function($scope, $stateParams, $uibModalInstance, entity, Contact, Patient) {
 
@@ -13,7 +13,7 @@ angular.module('consultorioOnlineUiApp').controller('ContactDialogController',
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('consultorioOnlineUiApp:contactUpdate', result);
+            $scope.$emit('consultorioOnlineAppApp:contactUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };

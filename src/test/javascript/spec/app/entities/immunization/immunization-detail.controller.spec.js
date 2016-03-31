@@ -30,7 +30,7 @@ describe('Controller Tests', function() {
 
         describe('Root Scope Listening', function() {
             it('Unregisters root scope listener upon scope destruction', function() {
-                var eventType = 'consultorioOnlineUiApp:immunizationUpdate';
+                var eventType = 'consultorioOnlineAppApp:immunizationUpdate';
 
                 createController();
                 expect($rootScope.$$listenerCount[eventType]).toEqual(1);

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
 	.controller('HeredoFamilyBkgDeleteController', function($scope, $uibModalInstance, entity, HeredoFamilyBkg) {
 
         $scope.heredoFamilyBkg = entity;

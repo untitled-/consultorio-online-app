@@ -4,7 +4,7 @@
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 ng-click="clear()">&times;</button>
-        <h4 class="modal-title" id="myTraumaLabel" translate="consultorioOnlineUiApp.trauma.home.createOrEditLabel">Create or edit a Trauma</h4>
+        <h4 class="modal-title" id="myTraumaLabel" translate="consultorioOnlineAppApp.trauma.home.createOrEditLabel">Create or edit a Trauma</h4>
     </div>
     <div class="modal-body">
         <jh-alert-error></jh-alert-error>
@@ -14,26 +14,26 @@
                     ng-model="trauma.id" readonly />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.trauma.code" for="field_code">Code</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.trauma.code" for="field_code">Code</label>
             <input type="text" class="form-control" name="code" id="field_code"
                     ng-model="trauma.code"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.trauma.name" for="field_name">Name</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.trauma.name" for="field_name">Name</label>
             <input type="text" class="form-control" name="name" id="field_name"
                     ng-model="trauma.name"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.trauma.description" for="field_description">Description</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.trauma.description" for="field_description">Description</label>
             <input type="text" class="form-control" name="description" id="field_description"
                     ng-model="trauma.description"
                      />
         </div>
 
         <div class="form-group">
-            <label translate="consultorioOnlineUiApp.trauma.pathologicBkgs" for="field_pathologicBkgs">pathologicBkgs</label>
+            <label translate="consultorioOnlineAppApp.trauma.pathologicBkgs" for="field_pathologicBkgs">pathologicBkgs</label>
             <select class="form-control" id="field_pathologicBkgs" name="pathologicBkgs" ng-model="trauma.pathologicBkgs" ng-options="pathologicBkg as pathologicBkg.id for pathologicBkg in pathologicbkgs track by pathologicBkg.id">
                 <option value=""></option>
             </select>

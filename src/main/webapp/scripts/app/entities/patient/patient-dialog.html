@@ -4,7 +4,7 @@
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 ng-click="clear()">&times;</button>
-        <h4 class="modal-title" id="myPatientLabel" translate="consultorioOnlineUiApp.patient.home.createOrEditLabel">Create or edit a Patient</h4>
+        <h4 class="modal-title" id="myPatientLabel" translate="consultorioOnlineAppApp.patient.home.createOrEditLabel">Create or edit a Patient</h4>
     </div>
     <div class="modal-body">
         <jh-alert-error></jh-alert-error>
@@ -14,25 +14,25 @@
                     ng-model="patient.id" readonly />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.patient.firstName" for="field_firstName">FirstName</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.patient.firstName" for="field_firstName">FirstName</label>
             <input type="text" class="form-control" name="firstName" id="field_firstName"
                     ng-model="patient.firstName"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.patient.middleName" for="field_middleName">MiddleName</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.patient.middleName" for="field_middleName">MiddleName</label>
             <input type="text" class="form-control" name="middleName" id="field_middleName"
                     ng-model="patient.middleName"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.patient.lastName" for="field_lastName">LastName</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.patient.lastName" for="field_lastName">LastName</label>
             <input type="text" class="form-control" name="lastName" id="field_lastName"
                     ng-model="patient.lastName"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.patient.dateOfBirth" for="field_dateOfBirth">DateOfBirth</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.patient.dateOfBirth" for="field_dateOfBirth">DateOfBirth</label>
                 <div class="input-group">
                     <input id="field_dateOfBirth" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="patient.dateOfBirth" is-open="datePickerForDateOfBirth.status.opened"
                     />
@@ -42,64 +42,64 @@
                 </div>
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.patient.job" for="field_job">Job</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.patient.job" for="field_job">Job</label>
             <input type="text" class="form-control" name="job" id="field_job"
                     ng-model="patient.job"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.patient.bloodType" for="field_bloodType">BloodType</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.patient.bloodType" for="field_bloodType">BloodType</label>
             <select class="form-control" name="bloodType" ng-model="patient.bloodType" id="field_bloodType">
-                <option value="A_POSITIVE" translate="consultorioOnlineUiApp.BloodType.A_POSITIVE">A_POSITIVE</option>
-                <option value="A_NEGATIVE" translate="consultorioOnlineUiApp.BloodType.A_NEGATIVE">A_NEGATIVE</option>
-                <option value="B_POSITIVE" translate="consultorioOnlineUiApp.BloodType.B_POSITIVE">B_POSITIVE</option>
-                <option value="B_NEGATIVE" translate="consultorioOnlineUiApp.BloodType.B_NEGATIVE">B_NEGATIVE</option>
-                <option value="AB_POSITIVE" translate="consultorioOnlineUiApp.BloodType.AB_POSITIVE">AB_POSITIVE</option>
-                <option value="AB_NEGATIVE" translate="consultorioOnlineUiApp.BloodType.AB_NEGATIVE">AB_NEGATIVE</option>
-                <option value="O_POSITIVE" translate="consultorioOnlineUiApp.BloodType.O_POSITIVE">O_POSITIVE</option>
-                <option value="O_NEGATIVE" translate="consultorioOnlineUiApp.BloodType.O_NEGATIVE">O_NEGATIVE</option>
+                <option value="A_POSITIVE" translate="consultorioOnlineAppApp.BloodType.A_POSITIVE">A_POSITIVE</option>
+                <option value="A_NEGATIVE" translate="consultorioOnlineAppApp.BloodType.A_NEGATIVE">A_NEGATIVE</option>
+                <option value="B_POSITIVE" translate="consultorioOnlineAppApp.BloodType.B_POSITIVE">B_POSITIVE</option>
+                <option value="B_NEGATIVE" translate="consultorioOnlineAppApp.BloodType.B_NEGATIVE">B_NEGATIVE</option>
+                <option value="AB_POSITIVE" translate="consultorioOnlineAppApp.BloodType.AB_POSITIVE">AB_POSITIVE</option>
+                <option value="AB_NEGATIVE" translate="consultorioOnlineAppApp.BloodType.AB_NEGATIVE">AB_NEGATIVE</option>
+                <option value="O_POSITIVE" translate="consultorioOnlineAppApp.BloodType.O_POSITIVE">O_POSITIVE</option>
+                <option value="O_NEGATIVE" translate="consultorioOnlineAppApp.BloodType.O_NEGATIVE">O_NEGATIVE</option>
             </select>
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.patient.maritalStatus" for="field_maritalStatus">MaritalStatus</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.patient.maritalStatus" for="field_maritalStatus">MaritalStatus</label>
             <select class="form-control" name="maritalStatus" ng-model="patient.maritalStatus" id="field_maritalStatus">
-                <option value="COMMON_LAW" translate="consultorioOnlineUiApp.MaritalStatus.COMMON_LAW">COMMON_LAW</option>
-                <option value="DIVORCED" translate="consultorioOnlineUiApp.MaritalStatus.DIVORCED">DIVORCED</option>
-                <option value="MARRIED" translate="consultorioOnlineUiApp.MaritalStatus.MARRIED">MARRIED</option>
-                <option value="OTHER" translate="consultorioOnlineUiApp.MaritalStatus.OTHER">OTHER</option>
-                <option value="SEPARATED" translate="consultorioOnlineUiApp.MaritalStatus.SEPARATED">SEPARATED</option>
-                <option value="SINGLE" translate="consultorioOnlineUiApp.MaritalStatus.SINGLE">SINGLE</option>
-                <option value="WIDOWED" translate="consultorioOnlineUiApp.MaritalStatus.WIDOWED">WIDOWED</option>
+                <option value="COMMON_LAW" translate="consultorioOnlineAppApp.MaritalStatus.COMMON_LAW">COMMON_LAW</option>
+                <option value="DIVORCED" translate="consultorioOnlineAppApp.MaritalStatus.DIVORCED">DIVORCED</option>
+                <option value="MARRIED" translate="consultorioOnlineAppApp.MaritalStatus.MARRIED">MARRIED</option>
+                <option value="OTHER" translate="consultorioOnlineAppApp.MaritalStatus.OTHER">OTHER</option>
+                <option value="SEPARATED" translate="consultorioOnlineAppApp.MaritalStatus.SEPARATED">SEPARATED</option>
+                <option value="SINGLE" translate="consultorioOnlineAppApp.MaritalStatus.SINGLE">SINGLE</option>
+                <option value="WIDOWED" translate="consultorioOnlineAppApp.MaritalStatus.WIDOWED">WIDOWED</option>
             </select>
         </div>
         <div class="form-group">
-            <label class="control-label" translate="consultorioOnlineUiApp.patient.gender" for="field_gender">Gender</label>
+            <label class="control-label" translate="consultorioOnlineAppApp.patient.gender" for="field_gender">Gender</label>
             <select class="form-control" name="gender" ng-model="patient.gender" id="field_gender">
-                <option value="MALE" translate="consultorioOnlineUiApp.Gender.MALE">MALE</option>
-                <option value="FEMALE" translate="consultorioOnlineUiApp.Gender.FEMALE">FEMALE</option>
+                <option value="MALE" translate="consultorioOnlineAppApp.Gender.MALE">MALE</option>
+                <option value="FEMALE" translate="consultorioOnlineAppApp.Gender.FEMALE">FEMALE</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label translate="consultorioOnlineUiApp.patient.addresss" for="field_addresss">addresss</label>
+            <label translate="consultorioOnlineAppApp.patient.addresss" for="field_addresss">addresss</label>
             <select class="form-control" id="field_addresss" name="addresss" ng-model="patient.addresss" ng-options="address as address.id for address in addressss | orderBy:'id' track by address.id">
                 <option value=""></option>
             </select>
         </div>
         <div class="form-group">
-            <label translate="consultorioOnlineUiApp.patient.heredoFamilyBkgs" for="field_heredoFamilyBkgs">heredoFamilyBkgs</label>
+            <label translate="consultorioOnlineAppApp.patient.heredoFamilyBkgs" for="field_heredoFamilyBkgs">heredoFamilyBkgs</label>
             <select class="form-control" id="field_heredoFamilyBkgs" name="heredoFamilyBkgs" ng-model="patient.heredoFamilyBkgs" ng-options="heredoFamilyBkg as heredoFamilyBkg.id for heredoFamilyBkg in heredofamilybkgss | orderBy:'id' track by heredoFamilyBkg.id">
                 <option value=""></option>
             </select>
         </div>
         <div class="form-group">
-            <label translate="consultorioOnlineUiApp.patient.nonPathologicBkgs" for="field_nonPathologicBkgs">nonPathologicBkgs</label>
+            <label translate="consultorioOnlineAppApp.patient.nonPathologicBkgs" for="field_nonPathologicBkgs">nonPathologicBkgs</label>
             <select class="form-control" id="field_nonPathologicBkgs" name="nonPathologicBkgs" ng-model="patient.nonPathologicBkgs" ng-options="nonPathologicBkg as nonPathologicBkg.id for nonPathologicBkg in nonpathologicbkgss | orderBy:'id' track by nonPathologicBkg.id">
                 <option value=""></option>
             </select>
         </div>
         <div class="form-group">
-            <label translate="consultorioOnlineUiApp.patient.pathologicBkgs" for="field_pathologicBkgs">pathologicBkgs</label>
+            <label translate="consultorioOnlineAppApp.patient.pathologicBkgs" for="field_pathologicBkgs">pathologicBkgs</label>
             <select class="form-control" id="field_pathologicBkgs" name="pathologicBkgs" ng-model="patient.pathologicBkgs" ng-options="pathologicBkg as pathologicBkg.id for pathologicBkg in pathologicbkgss | orderBy:'id' track by pathologicBkg.id">
                 <option value=""></option>
             </select>

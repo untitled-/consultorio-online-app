@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp').controller('PathologicBkgDialogController',
+angular.module('consultorioOnlineAppApp').controller('PathologicBkgDialogController',
     ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'PathologicBkg', 'Addiction', 'Alergy', 'QuirurgicalProcedure', 'Trauma', 'Disease', 'Patient',
         function($scope, $stateParams, $uibModalInstance, entity, PathologicBkg, Addiction, Alergy, QuirurgicalProcedure, Trauma, Disease, Patient) {
 
@@ -18,7 +18,7 @@ angular.module('consultorioOnlineUiApp').controller('PathologicBkgDialogControll
         };
 
         var onSaveSuccess = function (result) {
-            $scope.$emit('consultorioOnlineUiApp:pathologicBkgUpdate', result);
+            $scope.$emit('consultorioOnlineAppApp:pathologicBkgUpdate', result);
             $uibModalInstance.close(result);
             $scope.isSaving = false;
         };

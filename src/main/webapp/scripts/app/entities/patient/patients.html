@@ -1,5 +1,5 @@
 <div>
-    <h2 translate="consultorioOnlineUiApp.patient.home.title">Patients</h2>
+    <h2 translate="consultorioOnlineAppApp.patient.home.title">Patients</h2>
     <jh-alert></jh-alert>
     <div class="container-fluid">
         <div class="row">
@@ -7,14 +7,14 @@
                 <button class="btn btn-primary" ui-sref="patient.new" >
                     <span class="glyphicon glyphicon-plus"></span>
                     <span 
-class="hidden-xs"                        translate="consultorioOnlineUiApp.patient.home.createLabel">Create new Patient
+class="hidden-xs"                        translate="consultorioOnlineAppApp.patient.home.createLabel">Create new Patient
                     </span>
                 </button>
             </div>
             <div class="col-xs-8 no-padding-right">
                 <form name="searchForm" class="form-inline">
                     <div class="input-group pull-right" >
-                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'consultorioOnlineUiApp.patient.home.search' | translate }}">
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'consultorioOnlineAppApp.patient.home.search' | translate }}">
                         <span  class="input-group-btn width-min" >
                             <button class="btn btn-info" ng-click="search()">
                                 <span class="glyphicon glyphicon-search"></span>
@@ -31,18 +31,18 @@ class="hidden-xs"                        translate="consultorioOnlineUiApp.patie
             <thead>
                 <tr>
                     <th><span translate="global.field.id">ID</span></th>
-                    <th><span translate="consultorioOnlineUiApp.patient.firstName">FirstName</span></th>
-                    <th><span translate="consultorioOnlineUiApp.patient.middleName">MiddleName</span></th>
-                    <th><span translate="consultorioOnlineUiApp.patient.lastName">LastName</span></th>
-                    <th><span translate="consultorioOnlineUiApp.patient.dateOfBirth">DateOfBirth</span></th>
-                    <th><span translate="consultorioOnlineUiApp.patient.job">Job</span></th>
-                    <th><span translate="consultorioOnlineUiApp.patient.bloodType">BloodType</span></th>
-                    <th><span translate="consultorioOnlineUiApp.patient.maritalStatus">MaritalStatus</span></th>
-                    <th><span translate="consultorioOnlineUiApp.patient.gender">Gender</span></th>
-                    <th><span translate="consultorioOnlineUiApp.patient.addresss">addresss</span></th>
-                    <th><span translate="consultorioOnlineUiApp.patient.heredoFamilyBkgs">heredoFamilyBkgs</span></th>
-                    <th><span translate="consultorioOnlineUiApp.patient.nonPathologicBkgs">nonPathologicBkgs</span></th>
-                    <th><span translate="consultorioOnlineUiApp.patient.pathologicBkgs">pathologicBkgs</span></th>
+                    <th><span translate="consultorioOnlineAppApp.patient.firstName">FirstName</span></th>
+                    <th><span translate="consultorioOnlineAppApp.patient.middleName">MiddleName</span></th>
+                    <th><span translate="consultorioOnlineAppApp.patient.lastName">LastName</span></th>
+                    <th><span translate="consultorioOnlineAppApp.patient.dateOfBirth">DateOfBirth</span></th>
+                    <th><span translate="consultorioOnlineAppApp.patient.job">Job</span></th>
+                    <th><span translate="consultorioOnlineAppApp.patient.bloodType">BloodType</span></th>
+                    <th><span translate="consultorioOnlineAppApp.patient.maritalStatus">MaritalStatus</span></th>
+                    <th><span translate="consultorioOnlineAppApp.patient.gender">Gender</span></th>
+                    <th><span translate="consultorioOnlineAppApp.patient.addresss">addresss</span></th>
+                    <th><span translate="consultorioOnlineAppApp.patient.heredoFamilyBkgs">heredoFamilyBkgs</span></th>
+                    <th><span translate="consultorioOnlineAppApp.patient.nonPathologicBkgs">nonPathologicBkgs</span></th>
+                    <th><span translate="consultorioOnlineAppApp.patient.pathologicBkgs">pathologicBkgs</span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -54,9 +54,9 @@ class="hidden-xs"                        translate="consultorioOnlineUiApp.patie
                     <td>{{patient.lastName}}</td>
                         <td>{{patient.dateOfBirth | date:'mediumDate'}}</td>
                     <td>{{patient.job}}</td>
-                    <td translate="{{'consultorioOnlineUiApp.BloodType.' + patient.bloodType}}">{{patient.bloodType}}</td>
-                    <td translate="{{'consultorioOnlineUiApp.MaritalStatus.' + patient.maritalStatus}}">{{patient.maritalStatus}}</td>
-                    <td translate="{{'consultorioOnlineUiApp.Gender.' + patient.gender}}">{{patient.gender}}</td>
+                    <td translate="{{'consultorioOnlineAppApp.BloodType.' + patient.bloodType}}">{{patient.bloodType}}</td>
+                    <td translate="{{'consultorioOnlineAppApp.MaritalStatus.' + patient.maritalStatus}}">{{patient.maritalStatus}}</td>
+                    <td translate="{{'consultorioOnlineAppApp.Gender.' + patient.gender}}">{{patient.gender}}</td>
                     <td>
                         <a ui-sref="address.detail({id:patient.addresss.id})">{{patient.addresss.id}}</a>
                     </td>

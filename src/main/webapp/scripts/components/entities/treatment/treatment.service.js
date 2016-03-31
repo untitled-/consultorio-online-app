@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .factory('Treatment', function ($resource, DateUtils) {
         return $resource('api/treatments/:id', {}, {
             'query': { method: 'GET', isArray: true},

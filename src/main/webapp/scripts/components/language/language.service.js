@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .factory('Language', function ($q, $http, $translate, LANGUAGES) {
         return {
             getCurrent: function () {
@@ -28,7 +28,6 @@ angular.module('consultorioOnlineUiApp')
  */
     .constant('LANGUAGES', [
         'en', 'fr'
-        ,'es'
         // jhipster-needle-006 - JHipster will add new languages here
     ]
 );

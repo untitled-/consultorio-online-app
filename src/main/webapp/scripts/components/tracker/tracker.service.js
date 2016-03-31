@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('consultorioOnlineUiApp')
+angular.module('consultorioOnlineAppApp')
     .factory('Tracker', function ($rootScope, $cookies, $http, $q) {
         var stompClient = null;
         var subscriber = null;
