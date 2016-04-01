@@ -29,3 +29,4 @@ deploy:
   - "target/consultorio-online-app-0.0.1-SNAPSHOT.war"
   on:
     repo: untitled-/consultorio-online-app
+  skip_cleanup: true
