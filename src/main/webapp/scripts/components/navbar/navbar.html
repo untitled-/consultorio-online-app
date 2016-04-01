@@ -9,8 +9,11 @@
             </button>
             <a class="navbar-brand" href="#/"><span translate="global.title">jhipster</span> <span class="navbar-version">v{{VERSION}}</span></a>
         </div>
-        <div class="collapse navbar-collapse" id="navbar-collapse" ng-switch="isAuthenticated()">
+        <div class="collapse navbar-collapse" id="navbar-collapse" ng-switch="isAuthenticated()"  ng-switch="isAuthenticated()">
             <ul class="nav navbar-nav navbar-right">
+            	<li>
+            		<p class="navbar-text">{{account.login}}</p>
+            	</li>
                 <li ui-sref-active="active">
                     <a ui-sref="home" data-toggle="collapse" data-target=".navbar-collapse.in">
                         <span class="glyphicon glyphicon-home"></span>

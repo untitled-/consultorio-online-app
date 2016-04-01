@@ -1,0 +1,25 @@
+{
+    "consultorioOnlineAppApp": {
+        "alergy" : {
+            "home": {
+                "title": "Alergys",
+                "createLabel": "Create a new Alergy",
+                "createOrEditLabel": "Create or edit a Alergy",
+                "search": "Search for Alergy"
+            },
+            "created": "A new Alergy is created with identifier {{ param }}",
+            "updated": "A Alergy is updated with identifier {{ param }}",
+            "deleted": "A Alergy is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Alergy {{ id }}?"
+            },
+            "detail": {
+                "title": "Alergy"
+            },
+            "code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "pathologicBkgs": "PathologicBkgs"
+        }
+    }
+}

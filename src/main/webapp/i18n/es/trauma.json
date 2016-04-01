@@ -1,0 +1,25 @@
+{
+    "consultorioOnlineAppApp": {
+        "trauma" : {
+            "home": {
+                "title": "Traumas",
+                "createLabel": "Create a new Trauma",
+                "createOrEditLabel": "Create or edit a Trauma",
+                "search": "Search for Trauma"
+            },
+            "created": "A new Trauma is created with identifier {{ param }}",
+            "updated": "A Trauma is updated with identifier {{ param }}",
+            "deleted": "A Trauma is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Trauma {{ id }}?"
+            },
+            "detail": {
+                "title": "Trauma"
+            },
+            "code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "pathologicBkgs": "PathologicBkgs"
+        }
+    }
+}

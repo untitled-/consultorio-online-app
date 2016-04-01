@@ -25,4 +25,6 @@
     <include file="classpath:config/liquibase/changelog/20160331053113_added_entity_GynecoobstetricBkg.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20160331053115_added_entity_Consultation.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    
+    <include file="classpath:config/liquibase/changelog/20160331053120_insert_sample_records.xml" relativeToChangelogFile="false"/>
 </databaseChangeLog>

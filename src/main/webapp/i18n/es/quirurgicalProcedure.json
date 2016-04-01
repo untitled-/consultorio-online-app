@@ -1,0 +1,25 @@
+{
+    "consultorioOnlineAppApp": {
+        "quirurgicalProcedure" : {
+            "home": {
+                "title": "QuirurgicalProcedures",
+                "createLabel": "Create a new QuirurgicalProcedure",
+                "createOrEditLabel": "Create or edit a QuirurgicalProcedure",
+                "search": "Search for QuirurgicalProcedure"
+            },
+            "created": "A new QuirurgicalProcedure is created with identifier {{ param }}",
+            "updated": "A QuirurgicalProcedure is updated with identifier {{ param }}",
+            "deleted": "A QuirurgicalProcedure is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete QuirurgicalProcedure {{ id }}?"
+            },
+            "detail": {
+                "title": "QuirurgicalProcedure"
+            },
+            "code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "pathologicBkgs": "PathologicBkgs"
+        }
+    }
+}

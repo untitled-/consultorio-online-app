@@ -1,0 +1,9 @@
+{
+    "consultorioOnlineAppApp": {
+        "ContactType" : {
+            "null": "",
+            "PHONE": "PHONE",
+            "EMAIL": "EMAIL"
+        }
+    }
+}

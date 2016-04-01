@@ -1,0 +1,35 @@
+{
+    "consultorioOnlineAppApp": {
+        "gynecoobstetricBkg" : {
+            "home": {
+                "title": "GynecoobstetricBkgs",
+                "createLabel": "Create a new GynecoobstetricBkg",
+                "createOrEditLabel": "Create or edit a GynecoobstetricBkg",
+                "search": "Search for GynecoobstetricBkg"
+            },
+            "created": "A new GynecoobstetricBkg is created with identifier {{ param }}",
+            "updated": "A GynecoobstetricBkg is updated with identifier {{ param }}",
+            "deleted": "A GynecoobstetricBkg is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete GynecoobstetricBkg {{ id }}?"
+            },
+            "detail": {
+                "title": "GynecoobstetricBkg"
+            },
+            "menarche": "Menarche",
+            "begginingSexualLife": "BegginingSexualLife",
+            "pregnanciesNumber": "PregnanciesNumber",
+            "miscarriagesNumber": "MiscarriagesNumber",
+            "cSectionsNumber": "CSectionsNumber",
+            "pregnancyDetails": "PregnancyDetails",
+            "latestPapTest": "LatestPapTest",
+            "latestPapTestDetails": "LatestPapTestDetails",
+            "latestMammography": "LatestMammography",
+            "latestMammographyDetails": "LatestMammographyDetails",
+            "usesContraceptives": "UsesContraceptives",
+            "hasMenopause": "HasMenopause",
+            "contraceptivess": "Contraceptivess",
+            "patients": "Patients"
+        }
+    }
+}

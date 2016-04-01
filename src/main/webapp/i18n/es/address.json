@@ -1,0 +1,27 @@
+{
+    "consultorioOnlineAppApp": {
+        "address" : {
+            "home": {
+                "title": "Addresss",
+                "createLabel": "Create a new Address",
+                "createOrEditLabel": "Create or edit a Address",
+                "search": "Search for Address"
+            },
+            "created": "A new Address is created with identifier {{ param }}",
+            "updated": "A Address is updated with identifier {{ param }}",
+            "deleted": "A Address is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Address {{ id }}?"
+            },
+            "detail": {
+                "title": "Address"
+            },
+            "street": "Street",
+            "apt": "Apt",
+            "city": "City",
+            "zip": "Zip",
+            "country": "Country",
+            "patients": "Patients"
+        }
+    }
+}

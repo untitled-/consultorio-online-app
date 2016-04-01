@@ -7,6 +7,7 @@ angular.module('consultorioOnlineAppApp').controller('ConsultationDialogControll
         $scope.consultation = entity;
         $scope.labtests = LabTest.query();
         $scope.treatmentss = Treatment.query({filter: 'consultations-is-null'});
+        $scope.consultations = Consultation.query({filter: 'consultations-is-null'});
         $q.all([$scope.consultations.$promise, $scope.treatmentss.$promise]).then(function() {
             if (!$scope.consultations.treatments || !$scope.consultations.treatments.id) {
                 return $q.reject();

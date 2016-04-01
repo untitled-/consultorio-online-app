@@ -1,0 +1,25 @@
+{
+    "consultorioOnlineAppApp": {
+        "addiction" : {
+            "home": {
+                "title": "Addictions",
+                "createLabel": "Create a new Addiction",
+                "createOrEditLabel": "Create or edit a Addiction",
+                "search": "Search for Addiction"
+            },
+            "created": "A new Addiction is created with identifier {{ param }}",
+            "updated": "A Addiction is updated with identifier {{ param }}",
+            "deleted": "A Addiction is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Addiction {{ id }}?"
+            },
+            "detail": {
+                "title": "Addiction"
+            },
+            "code": "Code",
+            "name": "Name",
+            "description": "Description",
+            "pathologicBkgs": "PathologicBkgs"
+        }
+    }
+}

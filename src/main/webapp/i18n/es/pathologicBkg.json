@@ -1,0 +1,28 @@
+{
+    "consultorioOnlineAppApp": {
+        "pathologicBkg" : {
+            "home": {
+                "title": "PathologicBkgs",
+                "createLabel": "Create a new PathologicBkg",
+                "createOrEditLabel": "Create or edit a PathologicBkg",
+                "search": "Search for PathologicBkg"
+            },
+            "created": "A new PathologicBkg is created with identifier {{ param }}",
+            "updated": "A PathologicBkg is updated with identifier {{ param }}",
+            "deleted": "A PathologicBkg is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete PathologicBkg {{ id }}?"
+            },
+            "detail": {
+                "title": "PathologicBkg"
+            },
+            "observations": "Observations",
+            "addictions": "Addictions",
+            "alergys": "Alergys",
+            "quirurgicalProcedures": "QuirurgicalProcedures",
+            "traumas": "Traumas",
+            "diseases": "Diseases",
+            "patients": "Patients"
+        }
+    }
+}

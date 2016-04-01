@@ -1,0 +1,14 @@
+{
+    "consultorioOnlineAppApp": {
+        "MaritalStatus" : {
+            "null": "",
+            "COMMON_LAW": "COMMON_LAW",
+            "DIVORCED": "DIVORCED",
+            "MARRIED": "MARRIED",
+            "OTHER": "OTHER",
+            "SEPARATED": "SEPARATED",
+            "SINGLE": "SINGLE",
+            "WIDOWED": "WIDOWED"
+        }
+    }
+}

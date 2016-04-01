@@ -6,6 +6,10 @@ angular.module('consultorioOnlineAppApp')
         $scope.$state = $state;
         $scope.inProduction = ENV === 'prod';
 
+        Principal.identity().then(function(account) {
+            $scope.account = account;
+        });
+        
         $scope.logout = function () {
             Auth.logout();
             $state.go('home');
