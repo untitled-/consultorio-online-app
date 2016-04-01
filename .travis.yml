@@ -1,12 +1,31 @@
-language: node_js
-node_js:
-  - "0.12"
+language:
+- java
+jdk:
+  - oraclejdk8
 sudo: false
-before_install: npm install -g grunt-cli
-install: npm install
-before_script: grunt build
+env:
+  - MAVEN_CUSTOM_OPTS="-Pprod,heroku -DskipTests"
+before_install:
+- npm install -g npm
+- npm update
+- rm -fr /home/travis/.npm/
+- npm cache clean -g
+- npm install grunt-cli -g
+- npm install
+install:
+- mvn package -Pprod -DskipTests 
+script: true
 notifications:
   webhooks:
-    on_success: change  # options: [always|never|change] default: always
-    on_failure: always  # options: [always|never|change] default: always
-    on_start: false     # default: false
+    on_success: change
+    on_failure: always
+    on_start: false
+deploy:
+  provider: heroku
+  api_key:
+    secure: MPSQgmm5jQw7LNNTvPthq9rBFgGbG0QCAiF6Ach2oWJlxyowwXjQSkUR8VZ/uEXnARuWRi28KJ2FQ8aet65ae3QDUfvcoZKdHKqZVjpdOj5C70QMbjoF/RAK4S46LUVSCMZmL8yzoj15AdFLjpciAEOhwO8pqo5IYNAIMzNtGxq+qeiALZUpmd6tvnsJIwVlHlT0AwzAFLk5whS01zofbrUnLDzyDRdT4EZrueDYgFZEdKWrcB8keUreaPc/S7G3Liiw8/2RKsgWn8wdGvGTEom/w1kdHm4jqJEL5dU4JBj7sJ0iWzO1Hv2nroU+QotRovKmdmesGCLt2xMDoaKqujLLCJ6UCHYK5iNlLM45aN9/7golAL00aNivmwMJyEABvdDEswmzcIHz6Wo8H+Bnfs2AztYSlMsRPxGIFQDU/8YTsPqaOVadk7b5qRBxns9foNxDDHaglnjnAx3LKliGTsq9W5x89t0mPyzYvsLMbHRH0u7jt0gKswCq/CGg5iwnk8TVV7Zvw3+PfNKic9gDc3Xl+mOifE8NH6cLn3RbSgC4LER51343zJJNISH2ZjcQwsPPl/ekP4ch3E8W+GEwoqN2kMfZrdnoTMbsujlwaBPxIuVkQA/O2NkTtpjVFp3EbIwrd7J5Z3ab76rI6YDHT/emvc0/ThlBDPjKsRBGSJU=
+  app: consultorio-online-app
+  file:
+  - "target/consultorio-online-app-0.0.1-SNAPSHOT.war"
+  on:
+    repo: untitled-/consultorio-online-app
