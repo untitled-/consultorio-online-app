@@ -12,8 +12,10 @@ before_install:
 - npm install grunt-cli -g
 - npm install
 install:
-- mvn package -Pprod -DskipTests heroku:deploy-war
-script: true
+- "travis-setup.sh"
+- bundle install
+- mvn package -Pprod -DskipTests
+- heroku deploy:jar --jar target/*.war 
 notifications:
   webhooks:
     on_success: change
