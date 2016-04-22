@@ -11,9 +11,8 @@ before_install:
 - npm update
 - npm install grunt-cli -g
 - npm install
+- wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 install:
-- "travis-setup.sh"
-- bundle install
 - mvn package -Pprod -DskipTests
 - heroku deploy:jar --jar target/*.war 
 notifications:
