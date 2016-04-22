@@ -669,6 +669,10 @@
 		        <processTypes>
 				  <web>java -jar target/*.war --spring.profiles.active=prod,heroku --server.port=$PORT --jhipster.metrics.jmx.enabled=false --spring.datasource.maximumPoolSize=5</web>
 				</processTypes>
+				<includeTarget>false</includeTarget>
+				<includes>
+				  <include>target/consultorio-online-app-0.0.1-SNAPSHOT.war</include>
+				</includes>
 		      </configuration>
 		    </plugin>
             <plugin>
