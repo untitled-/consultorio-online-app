@@ -666,6 +666,9 @@
 		      <version>1.0.0</version>
 		      <configuration>
 		        <appName>${heroku.appName}</appName>
+		        <processTypes>
+				  <web>java -jar target/*.war --spring.profiles.active=prod,heroku --server.port=$PORT --jhipster.metrics.jmx.enabled=false --spring.datasource.maximumPoolSize=5</web>
+				</processTypes>
 		      </configuration>
 		    </plugin>
             <plugin>

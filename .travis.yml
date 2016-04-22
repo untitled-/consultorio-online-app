@@ -2,21 +2,20 @@ language:
 - java
 jdk:
   - oraclejdk8
-sudo: required
+sudo: false
 env:
   - MAVEN_CUSTOM_OPTS="-Pprod,heroku -DskipTests"
-  - secure: MPSQgmm5jQw7LNNTvPthq9rBFgGbG0QCAiF6Ach2oWJlxyowwXjQSkUR8VZ/uEXnARuWRi28KJ2FQ8aet65ae3QDUfvcoZKdHKqZVjpdOj5C70QMbjoF/RAK4S46LUVSCMZmL8yzoj15AdFLjpciAEOhwO8pqo5IYNAIMzNtGxq+qeiALZUpmd6tvnsJIwVlHlT0AwzAFLk5whS01zofbrUnLDzyDRdT4EZrueDYgFZEdKWrcB8keUreaPc/S7G3Liiw8/2RKsgWn8wdGvGTEom/w1kdHm4jqJEL5dU4JBj7sJ0iWzO1Hv2nroU+QotRovKmdmesGCLt2xMDoaKqujLLCJ6UCHYK5iNlLM45aN9/7golAL00aNivmwMJyEABvdDEswmzcIHz6Wo8H+Bnfs2AztYSlMsRPxGIFQDU/8YTsPqaOVadk7b5qRBxns9foNxDDHaglnjnAx3LKliGTsq9W5x89t0mPyzYvsLMbHRH0u7jt0gKswCq/CGg5iwnk8TVV7Zvw3+PfNKic9gDc3Xl+mOifE8NH6cLn3RbSgC4LER51343zJJNISH2ZjcQwsPPl/ekP4ch3E8W+GEwoqN2kMfZrdnoTMbsujlwaBPxIuVkQA/O2NkTtpjVFp3EbIwrd7J5Z3ab76rI6YDHT/emvc0/ThlBDPjKsRBGSJU=
+  - HEROKU_API_KEY="773c0136-5289-4282-baf1-17e9f884934a"
 before_install:
 - npm install -g npm
 - npm update
 - npm install grunt-cli -g
 - npm install
-- wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-- heroku keys:add
-- heroku plugins:install https://github.com/heroku/heroku-deploy
 install:
-- mvn package -Pprod -DskipTests
-- heroku deploy:jar --jar target/*.war 
+- "travis-setup.sh"
+- bundle install
+- mvn package -Pprod -DskipTests heroku:deploy-war
+script: bundle exec rspec
 notifications:
   webhooks:
     on_success: change
