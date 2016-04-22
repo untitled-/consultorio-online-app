@@ -12,7 +12,7 @@ before_install:
 - npm install grunt-cli -g
 - npm install
 install:
-- mvn package -Pprod -DskipTests heroku:deploy-war
+- mvn clean -Pprod -DskipTests heroku:deploy
 notifications:
   webhooks:
     on_success: change
