@@ -12,6 +12,7 @@ before_install:
 - npm install grunt-cli -g
 - npm install
 - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+- heroku keys:add
 - heroku plugins:install https://github.com/heroku/heroku-deploy
 install:
 - mvn package -Pprod -DskipTests
