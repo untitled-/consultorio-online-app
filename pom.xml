@@ -80,6 +80,7 @@
         <sonar.sources>${project.basedir}/src/main/</sonar.sources>
         <sonar.surefire.reportsPath>${project.testresult.directory}/surefire-reports</sonar.surefire.reportsPath>
         <sonar.tests>${project.basedir}/src/test/</sonar.tests>
+        <heroku.appName>consultorio-online-app</heroku.appName>
     </properties>
 
     <dependencies>
@@ -659,6 +660,14 @@
                     </dependency>
                 </dependencies>
             </plugin>
+            <plugin>
+		      <groupId>com.heroku.sdk</groupId>
+		      <artifactId>heroku-maven-plugin</artifactId>
+		      <version>1.0.0</version>
+		      <configuration>
+		        <appName>${heroku.appName}</appName>
+		      </configuration>
+		    </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
