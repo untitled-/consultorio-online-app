@@ -11,7 +11,7 @@ before_install:
 - npm install grunt-cli -g
 - npm install
 install:
-- HEROKU_API_KEY="773c0136-5289-4282-baf1-17e9f884934a" mvn heroku:deploy
+- HEROKU_API_KEY="773c0136-5289-4282-baf1-17e9f884934a" mvn -Pprod,heroku -DskipTests heroku:deploy
 notifications:
   webhooks:
     on_success: change
