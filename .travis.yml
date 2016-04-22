@@ -5,6 +5,7 @@ jdk:
 sudo: false
 env:
   - MAVEN_CUSTOM_OPTS="-Pprod,heroku -DskipTests"
+  - HEROKU_API_KEY="773c0136-5289-4282-baf1-17e9f884934a"
 before_install:
 - npm install -g npm
 - npm update
