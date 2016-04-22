@@ -11,8 +11,7 @@ before_install:
 - npm install grunt-cli -g
 - npm install
 install:
-- mvn package -Pprod -DskipTests
-- heroku deploy:jar --jar target/*.war 
+- mvn package -Pprod -DskipTests heroku:deploy-war
 script: true
 notifications:
   webhooks:
